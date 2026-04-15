@@ -1,3 +1,4 @@
+
 package com.app.coreservice.utils;
 
 public class GeneralUtils {
@@ -23,5 +24,18 @@ public class GeneralUtils {
         }
 
         return false;
+    }
+
+    public static boolean matchesFilter(String requestValue, String actualValue) {
+
+        if (isNullOrBlank(requestValue)) {
+            return true;
+        }
+
+        if (isNullOrBlank(actualValue)) {
+            return false;
+        }
+
+        return actualValue.equalsIgnoreCase(requestValue);
     }
 }
