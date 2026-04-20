@@ -1,0 +1,22 @@
+** JUNIT **   https://www.javatpoint.com/junit-tutorial
+_______________________________________________________________
+The common methods of Assert class are as follows:
+
+void assertEquals(boolean expected,boolean actual): checks that two primitives/objects are equal. It is overloaded.
+void assertTrue(boolean condition): checks that a condition is true.
+void assertFalse(boolean condition): checks that a condition is false.
+void assertNull(Object obj): checks that object is null.
+void assertNotNull(Object obj): checks that object is not null.
+
+** MOCKITO **
+_______________________________________________________________
+mock() method with Class: It is used to create mock objects of a concrete class or an interface. It takes a class or an interface name as a parameter.
+Syntax: <T> mock(Class<T> classToMock)
+mock() method with Answer: It is used to create mock objects of a class or interface with a specific procedure. It is an advanced mock method, which can be used when working with legacy systems. It takes Answer as a parameter along with the class or interface name. The Answer is an enumeration of pre-configured mock answers.
+Syntax: <T> mock(Class<T> classToMock, Answer defaultAnswer)
+mock() method with MockSettings: It is used to create mock objects with some non-standard settings. It takes MockSettings as an additional setting parameter along with the class or interface name. MockSettings allows the creation of mock objects with additional settings.
+Syntax: <T> mock(Class<T> classToMock, MockSettings mockSettings)
+mock() method with ReturnValues: It allows the creation of mock objects of a given class or interface. Now, it is deprecated, as ReturnValues are replaced with Answer.
+Syntax: <T> mock(Class<T> classToMock, ReturnValues returnValues)
+mock() method with String: It is used to create mock objects by specifying the mock names. In debugging, naming mock objects can be helpful whereas, it is a bad choice using with large and complex code.
+Syntax: <T> mock(Class<T> classToMock, String name)

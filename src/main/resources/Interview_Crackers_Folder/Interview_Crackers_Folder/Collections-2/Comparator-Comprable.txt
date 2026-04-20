@@ -1,0 +1,9 @@
+(1)  COMPARABLE:-(i)Comparable meant for default natural sorting order. 
+     (ii) Present in java.lang package. 
+	 (iii)Contains only one method. compareTo() method.
+	 (iv) String class and all wrapper   Classes implements Comparable interface. 
+	 
+(2)  COMPARATOR:-(i)Comparator meant for customized sorting order. 
+     (ii) Present in java.util package. 
+	 (iii)Contains 2 Methods:-(i) Compare() method.   (ii) Equals() method. 
+	 (iv) No predefined class implements Comparator.

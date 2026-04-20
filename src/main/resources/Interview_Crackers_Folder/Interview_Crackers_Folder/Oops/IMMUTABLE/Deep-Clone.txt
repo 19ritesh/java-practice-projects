@@ -1,0 +1,12 @@
+** DEEP CLONING:-
+___________________
+1.   Why Deep Copy is important for immutability?
+     (i)  HashMap values got changed because of shallow copy in the constructor.
+     (ii)It’s happening because of the direct reference to the original object in the getter function.
+	 
+2. * In case of Deep Cloning all the fields are copied. In this case even the objects referenced are copied
+     in the cloned object along with the fields. 
+   * This can be achieved by making new object for those reference 
+	 and then mapping with the class.
+   * This will ensure that the original and cloned objects doesnot share any 
+	 common thing that could lead to problems.	 

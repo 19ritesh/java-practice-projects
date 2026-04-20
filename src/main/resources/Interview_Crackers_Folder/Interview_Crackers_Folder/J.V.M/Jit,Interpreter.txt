@@ -1,0 +1,19 @@
+(1) Interpreter:-It is responsible to read byte code and interpret into mission code(native code) and 
+                execute that mission line by line.
+ * The problem with interpreter,it interpret every time,even same method invoked multiple times,which reduces 
+   performance of the system.(TO overcome this problem Sun people introduced JIT compilers in 1.1 version).
+   
+(2) JIT Compilers:- The main purpose of JIT compiler is to improve the performance.
+ * Internally,JIT compiler maintains a seperate count for every method.
+ * Whenever JVM come across any method call,first that method will interpreted normally by the interpreter.
+ * And JIT compiler increments corresponding count variables.
+ * This process will be continued for every method.
+ * Once,If any method count reaches threshold value then JIT compiler identifies that method is repeteadly used 
+   method .(Hotspot).
+ * Then Immediately JIT compiler compile that methods and generates native code.
+ * Next time,JVM across that method call then JVM uses native code directly and executes it instead of
+   interpreting once again.
+ * So,that performance of the system will be improve.
+ * But Threshold count varied from JVM to JVM. 
+   
+				

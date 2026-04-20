@@ -1,0 +1,8 @@
+** ORM:-The developer defines mapping between java class and database tables.
+ 
+** Student s1=new Student(1,"Ritesh");
+   int id=(Integer)session.save(s1);
+   
+** Internally,Hibernate will store the data into database.
+** It will store all database into in proper tables and columns.
+** And it return the primary key.   

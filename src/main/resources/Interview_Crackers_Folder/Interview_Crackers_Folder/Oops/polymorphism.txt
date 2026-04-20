@@ -1,0 +1,14 @@
+** POLYMORPHISM:- Same name with different forms is the concept of polymorphism.(Overloading and Overriding). 
+  
+   * Method signature is same but in parent class one type of implementation and in child class 
+     type of implementation.
+   * Usage of parent reference to hold the child object is known as polymorphism.	
+
+** Q. When we should go for parent reference to hold child object?
+      
+ -->  If We don't know runtime type of object,then we should go for parent reference.	
+      E.g:-The first element in the present in the Arraylist can be any type.
+   *  It may be Student object or Customer Object or String object or StringBuffer object.
+   *  Hence,the return type of get() is object,Which can hold any object.
+        E.g:- Object o=l.get(0);   
+   

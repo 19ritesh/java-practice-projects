@@ -1,0 +1,10 @@
+(1)  MAP():-(i)The function we pass to map() operation returns a single value.
+     (ii)    E.g:- List<String> l2 = l.Stream().map(s ->s.toUpperCase()).collect(Collectors.toList()); 
+	 (iii)   Map is used for transformation only,but flatMap() is used for both transformation and flattering.
+	 
+	 
+(2)  FLATMAP():-()The function we pass to the flatMap()operation returns a stream of value.
+     (ii)  E.g:- List<String> flatMapList = a1.stream().flatMap(hList -> hList.stream()).collect(Collectors.toList()); 	
+     (iii) FLATMAP() is combination of map and flat operation.	 
+	 
+	 

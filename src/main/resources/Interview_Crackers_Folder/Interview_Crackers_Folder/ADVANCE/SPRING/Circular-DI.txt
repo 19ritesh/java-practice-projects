@@ -1,0 +1,19 @@
+** How can i maintain circular dependencies.?
+   * Bean A-->Bean B-->Bean A
+   
+   Sol(1):- A simple way of break circular dependency is:-Initialize one of the beans lazily.
+             * That is instead of fully initializy the bean,it will create a proxy to inject into other bean.The  
+           injected bean will only be fully created when it's first needed.
+         
+		 Eg:-public circularDependency(@Lazy CircularDependencyB circB)
+		     {
+			  this.circB=circB;
+		     }
+	
+	Sol(2):-Use setter/field injection:-
+             * We will not inject by constructor injection.
+             * We will use setter injection:- By this way spring creates the beans but 
+			   dependencies are not injected until they are needed.
+
+    Sol(3):- We can also use @PostConstruct Annotation on method level and We
+             can avoid circular dependency.

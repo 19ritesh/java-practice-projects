@@ -1,0 +1,21 @@
+** Primary key:-
+____________________
+@Entity
+@Table(name="student")
+public class Student
+{
+@Id
+@GeneratedValue(Strategy=GenerationType.IDENTITY)
+@Column(name="id")
+private int id;
+}
+
+** AUTO:-It is used for appropriate strategy for particular database.
+** IDENTITY:- It will used for assign primary keys using database identity column.
+** SEQUENCE:-Assign primary keys using a database sequence.
+** TABLE:-It is used for assign primary keys using an underlying db table to ensure uniqueness.
+
+** BONUS:-We can define our own custom strategy.
+ * Create subclass of org.hibernate.id.sequence generator.
+ * Override method:- public serializable generate(---)
+ * We can write custom logic in generate method.

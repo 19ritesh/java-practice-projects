@@ -1,0 +1,18 @@
+(1)  SUPER():-The 1st line inside constructor should be either suoer() or this() if we are not writing anything
+               compiler will always generate super().
+	CASE 1:-We have to take super() or this() only in the 1st line of constructor.If We are 
+             taking anywhere else we will get compile time error.
+    CASE 2:-We can use either super() or this() but not simultaneously.
+    CASE 3:-We can use super() or this() only inside constructor.If We are using anywhere else We
+               will get compile time error.
+
+
+Example: 
+(1) SUPER(),THIS():-
+    1. These are constructors calls.
+	2. We should use only inside constructors.
+	
+(2)	SUPER,THIS:-
+
+   1. These are keywords which can be used to call parent class and current class instance members.  
+   2. We can use anywhere except static area. 			   

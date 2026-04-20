@@ -1,0 +1,6 @@
+What are the Inheritance mapping strateigies:-
+_______________________________________________________________________________________________________________________
+** There are 3 ways:-
+** Table per Hiererchy.
+** Table per concrete class.
+** Table per class.

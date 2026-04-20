@@ -1,0 +1,6 @@
+****Extends vs implements:****
+________________________________________
+**  A class can extend only one class at a time. 
+ *  A class can implements any no. Of interfaces at a time. 
+ *  A class can extend a class and can implement an interface simultaneously. 
+ *  An interface can extend any no. Of interfaces at a time. 

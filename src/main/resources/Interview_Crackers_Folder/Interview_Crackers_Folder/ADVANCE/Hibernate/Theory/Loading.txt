@@ -1,0 +1,21 @@
+(1)  EAGER LOADING:-(i)Eager loading will load all dependent entities.
+     (ii)But,It slows down the execution.
+	 
+(2)  LAZY LOADING:-(i)Lazy loading will load the main entity first.
+     (ii) Load dependent entities on demand. (lazy loading is preferred.).
+	 (iii)It requires Hibernate session.
+     (iv)When the Hibernate session is closed and we try to retrieve lazy data then we will get an exception.	 
+	 
+(3)	 USES:- @OneToMany(fetch=FetchType.LAZY,mappedBy="")
+            private List<Course> courses;
+			
+(4)  DEFAULT FETCH TYPE:- @OneToOne      ----     FetchType.EAGER
+                          @OneToMany     ----     FetchType.LAZY
+                          @ManyToOne     ----     FetchType.EAGER
+                          @ManyToMany	 ----	  FetchType.LAZY	
+
+  NOTE:- Based on requirement We can also overide the default fetch types.
+         E.G:- 
+               @ManyToOne(fetch=FetchType.LAZY)
+			   @JoinColumn(name="instructorId")
+               private Instructor instructor;			   

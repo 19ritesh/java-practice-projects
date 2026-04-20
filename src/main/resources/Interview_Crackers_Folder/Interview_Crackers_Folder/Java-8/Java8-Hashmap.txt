@@ -1,0 +1,14 @@
+** HASHMAP-JAVA8-CHANGES:-(i)As We know that,In case of hash collision objects are stored as node in linked list
+   and equals methods are used to compare the keys.
+   (ii)  To find a correct key in linked list is a linear operation.
+   (iii) So in worst case scenerio the complexity will be O(n).
+   (iv)  To overcome this problem hash elements used BALANCED TREES instead of linked list after certain
+         threshold is reached.
+		 
+		 It means:-I can say in other words
+		 
+   (v)  Hashmap starts with sorting entry objects in linked list but after number of items in a hash becomes
+        larger than a certain threshold.
+  (vi)  The Hash will change from using a linked list to a balanced tre,which will improve the worst case
+        performance from O(n) to O(log n).  
+   

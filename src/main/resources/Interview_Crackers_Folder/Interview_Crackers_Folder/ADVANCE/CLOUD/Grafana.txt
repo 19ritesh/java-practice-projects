@@ -1,0 +1,6 @@
+**Grafana**
+_________________
+**  Grafana is an open source solution for running data analytics,and  pulling up metrics that make sense of the
+    massive amount of data & to monitor our apps with the help of cool customizable dashboards.
+ *  In other words,Grafana being an open source solution also enables us to write plugins from scratch 
+    for integration with several different data sources.	 

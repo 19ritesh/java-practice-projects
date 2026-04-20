@@ -1,0 +1,14 @@
+(1)  OVERLOADED CONSTRUCTOR:-
+     (i) A class can contain more than one constructor and all these constructors having the same name
+      	 but different arguments and hence these constructors are considered as overloaded constructors. 
+		 
+	(ii)  recursive method call is always runtime exception where as recursive constructor 
+	       invocation is a compile time error. 	 
+		 
+		 
+		 
+  NOTE:-(1) “Inheritance concept is not applicable for constructors and hence overriding concept
+            also not applicable to the constructors. But constructors can be overloaded”. 	
+
+        (2) We can take constructor in any java class including abstract class also but we
+          		can’t take constructor inside inheritance. 		  

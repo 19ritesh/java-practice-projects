@@ -1,0 +1,5 @@
+What is ORM:-
+_______________________________________________________________________________________________________________________
+** Object relational mapping.
+** It is programming strategy.
+** Where we can simplifies data creation,manipulation and data access.

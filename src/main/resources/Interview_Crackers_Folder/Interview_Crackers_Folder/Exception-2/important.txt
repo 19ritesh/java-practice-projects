@@ -1,0 +1,17 @@
+(1) ClassNotFoundException:-Java.lang ClassNotFoundException is thrown when the J.V.M tries to load a particular
+                           class and then specified class not found in class path.It is checked exception
+						   must be declared with method or class.
+						   
+   Soln 1:- Verify the name of requested class is correct and that appropriate .jar file exists in 
+            our class path.If not,explicitly add to our app classpath.
+   Soln 2:- In case of specified .jar file exists in our classpath then,our app classpath is getting
+            overridden and we must find exact classpath used by our application.
+
+(2) NoClassDefnFound Error:-It is the child class of errors and hence it is unchecked.
+   It is an error that occurs when a particular class is present at compile time, but was missing at run time.
+   
+(3) ClassCastException:- It is the child class of RuntimeException and hence it is unchecked.Automatically
+                        by the JVM whenever we are trying to typecast parent obj to child type.
+						 E.g:- Object o=new Object();
+						       String s=(String)o;	   
+					   			

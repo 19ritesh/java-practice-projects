@@ -1,0 +1,37 @@
+** Serialization:- The Process of writing state of an object to a file is Serialization
+   * But it is the process of converting an object from java supported  form into either file supported form
+     or network supported form.
+   * By using fileOutputStream and ObjectOutputStream We can achieve the Serialization.
+        
+   * D-Serialization:-The process of reading state of an object from the file is called D-Serialization.
+   * But it is the process of converting an object from either file supported form or network supported form into
+     java supported form.
+   * By using FileInputStream and ObjectOutputStream classes we can implement D-Serialization.
+   
+   NOTE:- We can serialize only serializable objects and object is said to be serializable if and only if the
+          corresponding class implements serializable interface.
+        * Serilizable interface is present in java i.o package and it doesn't contain any methods.It is marker 
+		  interface. If we are trying to serialize a non serializable object then wewill get run time
+		  exception saying NotSerilizableException.
+		  E.g:-
+		        public class Dog implements Serializable {
+	              int i=10;
+	              int j=20;
+                }
+				public class SerilizeDemo {
+	public static void main(String[] args) throws Exception{
+		Dog d1=new Dog();
+		//Serialization
+		FileOutputStream fos=new FileOutputStream("abc.ser");
+		ObjectOutputStream oos=new ObjectOutputStream(fos);
+		oos.writeObject(d1);
+		
+		//D-Serialization
+		FileInputStream fis=new FileInputStream("abc.ser");
+		ObjectInputStream ois=new ObjectInputStream(fis);
+		Dog d2=(Dog)ois.readObject();
+		System.out.println(d2.i+" "+d2.j);
+		
+	}
+
+}

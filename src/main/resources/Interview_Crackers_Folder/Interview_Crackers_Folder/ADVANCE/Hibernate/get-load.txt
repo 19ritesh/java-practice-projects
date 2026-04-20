@@ -1,0 +1,10 @@
+ get():-                                                   |                               load():- 
+___________________________________________________________|______________________________________________________________________
+ ** Returns null if object is not found.                   | ** Throws ObjectNotFound exception if object is
+                                                           |     not found.
+		                                                   |          																																  
+ ** get() will always hit the db.                          | ** load() doesn't hit the database.
+ ** It returns real object not proxy.                      | ** It returns proxy object.
+ ** It should be used if we are not sure about the         | ** It should be used if we are sure that interface
+     existence of instance.                                |      exists.
+___________________________________________________________|_________________________________________________________   	                 

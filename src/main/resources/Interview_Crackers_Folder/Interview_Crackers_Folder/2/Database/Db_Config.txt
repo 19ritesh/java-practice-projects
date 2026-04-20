@@ -1,0 +1,29 @@
+Database Configuration and queries:-
+______________________________________
+** Mysql Client(Maria db) - Search this for hit queries from command line in Mavenir laptop.
+** Connect with mysql db first withe username and password.
+** By default mysql username is - root and password is - mavenir
+** But for this application we will create a new user with new password.(Username - sergey and password - sergey).
+
+** create user 'sergey'@'localhost'identified by 'sergey';
+** grant all privileges on photo_app.* to 'sergey'@'localhost';
+** Flush privileges;
+** Connect with db - mysql -usergey -psergey photo_app
+** Show databases;
+** create database photo_app;
+** use photo_app;
+
+Database Configuration in PhotoAppApiUsers:-
+_______________________________________________
+** Use this for H2 console for Mysql database:-(Used in properties file).
+     spring.h2.console.enabled=true
+	 spring.h2.console.settings.web-allow-others=true
+	 
+	 decode functionality.
+
+
+
+
+
+
+

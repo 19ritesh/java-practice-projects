@@ -1,0 +1,16 @@
+What is JPA:-
+_______________________________________________________________________________________________________________________
+** Java persistence API is a collection of classes and methods to presently store the vast amounts of data
+                          into a database which is provided by oracle corporation.
+** USE:- To reduce the burden of writing codes for relational object management a programmer follows 
+         the JPA provider framework,which allows easy interaction with db instance.		
+_____________________________________________________________________________________________________________________________
+** JPA EntityManager:-
+____________________________________________________________________________________________________________________
+** Hibernate provides implementation of JPA interfaces EntityManagerFactory and EntityManager.
+** JPA Entity Manager is used to access a database in a particular application.It is used to manage
+   persestient entity instances to find entities by their primary key identity and to query over all entities.		 
+   				
+      
+   	
+	

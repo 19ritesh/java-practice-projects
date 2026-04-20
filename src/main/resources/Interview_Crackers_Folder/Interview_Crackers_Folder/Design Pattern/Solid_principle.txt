@@ -1,0 +1,55 @@
+** SOLID PRINCIPLE:-
+________________________
+** Single Responsibility Principle(SRP): It means a software components must have only one responsibility.
+   Eg:- PROBLEM:- Supoose i am working on one functionality.The purpose of that functionality is to implement email support features.
+                  So what i will do,i will simply make one interface and we ill declare one method inside that interface and will provide the 
+				  implementaion of that interface in the implementaion clas.
+			  
+			  **  After product release we will get the new requirement like Email content is two types like Html and Text.
+                  One way to solve this problem is create another method inside the interface with name of sendHtmlEmail().But this is not the perfect
+                  way in terms of Single Responsibility principle. It looks like Ugly.
+       
+	   SOLUTION:- The perfect way to solve this problem is what we will do.We will create one interface with the name of sendEmail().
+                  And we will provide the implementaion in the implementation class.
+				  Now,For content of the email is,we will create a seperate interface and we will decalre a seperate method with
+				  the name of emailContent(). And provide the implemention in the separate implementation class.
+	 
+	  BENEFITS:-  Easy to understand and maintain
+	              Improved usability
+				  
+** Open closed principle :- Software entities are open for extension but closed for the modification.
+
+   Eg:-PROBLEM:- Suppose that i have to develop one Calculator application which can perform addition 
+                 and substraction of two numbers.
+    Soln:-       For that i have to implement a top level calculator.
+              *  Now,We will write a Addition class which implements the top level interface and calculate the
+                 addition of two numbers.
+			  *  Then we will write the substraction class where we can write the logic of subtraction
+                   of two numbers.(This class also implement top level interface.)
+              *  Finally we will write the main class which can perform the operations of calulator.
+              
+              *  Now,again we will get the problem like we have to write the logic for multiplication or
+                 division then we can't  do it.If will try to perform then it will break the open closed
+                 principles.(Ref=https://www.baeldung.com/java-open-closed-principle)
+
+** Liskov’s Substitution Principle: Derived or child classes must be substitutable for their
+                                    base or parent classes.
+
+** Interface Segrregation Principle:- Clients should not be forced to implement unnecessary methods which they will not use.
+
+** Dependency Inversion Principle:- Depends on abstractions, not on concreations.				 
+			
+
+
+
+
+
+
+
+
+			
+   				 
+				  
+				  
+ 				  
+   

@@ -1,0 +1,21 @@
+** There are 3 types of class loader:-
+*  (1)Bootstrap class loader:- This class loader is responsible for loading core java API classes present in
+      rt.jar. (location- jdk\jre8\lib\rt.jar).This class loader is by default available with JVM.
+	  * Implemented in:- Native language like C and C++.
+	  
+   (2)Extension class loader:-It is the child of Bootstrap class loader.It is responsible to load classes from
+      extension class path. (locatio:-jdk\jre\lib\ext).
+	  * Implemented in:- Java and corresponding .class and corresponding .class file.
+
+   (3)Application class loader:-It is the child of extension class loader.This class loader is responsible to load
+      classes from application class path.
+      * It internally uses environment variable class path.
+      * This class loader is implemented in java and corresponding .class file.
+      * Implemented in:- Java and corresponding .class and corresponding .class file.
+
+** Purpose of java.lang class loader class:-
+   * We can use class loader class to define our own customized class loaders.
+   * Every customized class loader in java should extends java.lang.class loader class either directly or
+     indirectly.
+   * Hence this class acts as base class for developing our own customized class loaders.	 
+	  

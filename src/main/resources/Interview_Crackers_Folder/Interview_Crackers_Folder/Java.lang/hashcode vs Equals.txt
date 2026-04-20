@@ -1,0 +1,13 @@
+(1)  ONLY .EQUALS() OVERIDED:-
+
+  ** If we will not override hashcode() then the object class hashcode() method
+     will be executed that gives different values for different objects,even if they are equal according
+	 to the equals() method.
+	 
+	 
+(2)  ONLY .HASHCODE() OVERIDED:- 
+
+  ** Only the reference to the same object will return true.
+     We can say,those objects we expected to be equal(), will not be equal by calling the equals method.
+   	 
+     

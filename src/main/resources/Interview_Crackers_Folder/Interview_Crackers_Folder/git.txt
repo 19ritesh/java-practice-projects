@@ -1,0 +1,26 @@
+git init	                                                       -    Initialize a local Git repository
+git clone ssh://git@github.com/[username]/[repository-name].git	   -    Create a local copy of a remote repository
+git status	                                                       -    Check status
+git add[file-name.txt]	                                           -    Add a file to the staging area.
+git add -A	                                                            Add all new and changed files to the staging area
+git commit -m "[commit message]"	                               -    Commit changes
+git rm -r [file-name.txt]	                                       -    Remove a file (or folder)
+git merge --abort                                                  -    --abort option will exit from the merge process and return the branch to the state before the merge began.
+git reset                                                          -    Git reset can be used during a merge conflict to reset conflicted files to a know good state
+
+    https://github.com/joshnh/Git-Commands
+
+git push origin [branch name]	          Push a branch to your remote repository
+git push -u origin [branch name]	      Push changes to remote repository (and remember the branch)
+git push	                              Push changes to remote repository (remembered branch)
+git push origin --delete [branch name]	  Delete a remote branch
+git pull	                              Update local repository to the newest commit
+git pull origin [branch name]	          Pull changes from remote repository
+git remote add origin ssh://git@github.com/[username]/[repository-name].git	Add a remote repository
+git remote set-url origin ssh://git@github.com/[username]/[repository-name].git	Set a repository's origin branch to SSH    
+
+git log	View changes
+git log --summary	View changes (detailed)
+git log --oneline	View changes (briefly)
+git diff [source branch] [target branch]	Preview changes before merging	
+	

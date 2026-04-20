@@ -1,0 +1,21 @@
+** PROFILING:-
+______________________
+ **  The main purpose of profile is - allowing us to map our beans to different profiles — for example,
+     dev, test, and prod.
+	 IMPL:- We use the @Profile annotation — we are mapping the bean to that particular profile
+	 E.g:- @Component
+           @Profile("dev")
+           public class DevDatasourceConfig
+	(2) Udate maven with this :- specifying the spring.profiles.active configuration property.
+    (3) WebApplicationInitializer can be used to configure the ServletContext programmatically.
+        E.g:- @Configuration
+public class MyWebApplicationInitializer 
+  implements WebApplicationInitializer {
+ 
+    @Override
+    public void onStartup(ServletContext servletContext) throws ServletException {
+ 
+        servletContext.setInitParameter(
+          "spring.profiles.active", "dev");
+    }
+}	

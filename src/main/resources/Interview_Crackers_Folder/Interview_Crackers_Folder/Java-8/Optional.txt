@@ -1,0 +1,26 @@
+**  OPTIONAL:-
+___________________________
+i.  Java introduced a new class Optional in jdk8.
+ii.  It is a public final class and used to deal with NullPointerException in Java application.
+iii.  It provides methods which are used to check the presence of value for particular variable.
+
+
+(2)    E.g:-   String[] str = new String[10];  
+        String lowercaseString = str[5].toLowerCase();  
+        System.out.print(lowercaseString);   //O/P- Null pointer exception.
+		
+   Soln:- String[] str = new String[10];  
+        Optional<String> checkNull = Optional.ofNullable(str[5]);  
+        if(checkNull.isPresent()){            // check for value is present or not  
+            String lowercaseString = str[5].toLowerCase();  
+            System.out.print(lowercaseString);  
+        }else  
+            System.out.println("string value is not present");  	
+
+(3)  Methods:-(i)public static <T> Optional<T> empty():-  It returns an empty Optional object. No value is present
+               for this Optional.
+     (ii)public T get():- If a value is present in this Optional, returns the value, otherwise throws 
+              NoSuchElementException. 	
+     (iii) public boolean isPresent()	It returns true if there is a value present, otherwise false.
+      (iv) public void ifPresent(Consumer<? super T> consumer):- 	If a value is present, invoke the specified 
+	               consumer with the value, otherwise do nothing.	 

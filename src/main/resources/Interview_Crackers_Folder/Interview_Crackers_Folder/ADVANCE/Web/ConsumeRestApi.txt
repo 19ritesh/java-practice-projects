@@ -1,0 +1,18 @@
+** CONSUME REST API:-
+
+  ** public  class RestClient
+  {
+   private static final String Get_All_Users_Api="http://localhost:8080/api/users";
+   static RestTemplate restTemplate=new RestTemplate();
+   
+   Public static void  callGetAllUsersApi()
+   {
+     HttpHeaders httpHeaders=new HttpHeaders();
+	 headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+	 
+	 HttpEntity<String> entity=new HttpEntity("parameters",headers);
+	 
+	 ResponseEntity<String> result=restTemplate.exchange(Get_All_Users_Api,HttpMethod.GET,Entity,String.class);
+	 System.out.printall("Return respone Entity"+result);
+   }
+  }

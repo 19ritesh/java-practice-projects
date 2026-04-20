@@ -1,0 +1,59 @@
+** EXCEPTION:- (CHECKED EXCEPTION):-
+
+** ClassNotFoundException:-Java.lang ClassNotFoundException is thrown when the J.V.M tries to load a particular
+                           class and then specified class not found in class path.It is checked exception
+						   must be declared with method or class.
+   Soln 1:- Verify the name of requested class is correct and that appropriate .jar file exists in 
+            our class path.If not,explicitly add to our app classpath.
+   Soln 2:- In case of specified .jar file exists in our classpath then,our app classpath is getting
+            overridden and we must find exact classpath used by our application.
+
+** SqlException:-An exception that provides information on a database access error or other errors.	
+   Soln:-   Load JDBC driver,create a connection to the db,catch sql ex.
+
+** I/O Execption:-Java i/o exceptions are input/output exceptions,and they occur whenever an i/p or o/p is
+               failed or interpreted. For ex:- If we ae trying to read file and file does not exists,then
+			   we will get this error.
+
+** FileNotFoundException:-A file with specified pathname does not exist.
+                          A file with specified pathname does exist but inaccessible for same reason(required
+						  writing or reading of that file,don't allowing accessing the file).
+   Soln:-Create a file:-Reading a optional configuration file,not finding it and creating a new one with 
+                          default values.
+					**  Handle by try or catch or throws keyboard.
+
+** CloneNotException:- In a class,We performed cloning but in class we didn't implemented cloneable interface.
+
+** ParseException:- It is checked exception.
+                 ** It occurs when fail to parse a String that is ought to have a special format.
+                 ** When we are trying to parse String to date obj.And as we know String should have specified format.
+				 ** If given String is doesn't meet the format java.text.parseException will be thrown.
+				 
+				    E.g 1:- String dateStr="2011-11-19";
+					DateFormat df=new SimpleDateFormat("yyyy-mm-dd");
+					O/P:- Sat Nov 19:00:0000  EEt 2020
+					
+					E.g 2:- String dateStr="2011 11 19";
+					O/P:- Parse exception in this case
+					
+** EXCEPTION:- Runtime:-(EXCEPTION UNCHECKED):-
+______________________________________________
+** AirthmeticException:-If any no is divided by zero then we will get this exception.
+
+** NullPointerException:-It is the child class of RuntimeException and hence it is unchecked.Raised
+                          automatically by JVM,whenever we are trying to call any method on null.
+
+** NoFormatException:-It is the child class of IllegalArgumentException and hence it is unchecked.Raised
+                      explicitly by the programmer to indicate that we are attempting to convert String to no.
+                      But String is not properly formatted.E.g:- int j=Integer.parseInt("ten");
+
+** ArrayIndexOutOfBoundException:-It is the child class of RuntimeException and hence it is unchecked.Raised
+                                  automatically by the JVM whenever we are trying to access array element
+								  without or range index.
+								  E.g:- int[] x=new int[10];
+								        s.o.p(x[100]);  //ArrayOutOfBoundException.
+										
+** ClassCastException:- It is the child class of RuntimeException and hence it is unchecked.Automatically
+                        by the JVM whenever we are trying to typecast parent obj to child type.
+						 E.g:- Object o=new Object();
+						       String s=(String)o;					

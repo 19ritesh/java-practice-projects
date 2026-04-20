@@ -1,0 +1,15 @@
+** Advantage:-
+________________
+** Hibernate provides the ORM features.
+** It supports Inheritance,associations,Collections.
+** Hibernate have its own Query language which is database independent(HQL).
+** Hibernate have capability to generate primary keys while storing the data into the database.
+** In JDBC We have only checked exceptions,so we have to write all code inside try and catch block or throws keyboard.
+** But In case of Hibernate we have onlyunchecked exceptions,so we don't need to write code inside 
+   checked or inside try or catch block.
+** Hibernate handles all lower level sql. 
+
+** Disadvantage:-
+_________________________________
+** Biolarplate Code issue:- We need to write same code in several files in same application.  
+** It's little bit slow compare to JDBC,because it's generate lot's of sql queries at Runtime.

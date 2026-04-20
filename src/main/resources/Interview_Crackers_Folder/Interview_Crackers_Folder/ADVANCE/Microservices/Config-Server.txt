@@ -1,0 +1,18 @@
+** CONFIG SERVER:-
+___________________
+**  Purpose:- (i) With microservices, we create a central config server where all configurable parameters of 
+                  micro-services are written version controlled.
+			 (ii) The benefit of a central config server is that if we change a property for a microservice,
+          			 it can reflect that on the fly without redeploying the microservice.	  
+				  
+				  
+	IMPLEMENTATIONS:-
+________________________________________	
+**  Add the dependency of config server.
+ *  Use the @EnableConfigServer annotations on the top of main class.
+ *  properties file:- spring.cloud.config.server.git.uri=
+ 
+ Note:- If we are creating any microservice then we don'y have to need the configure the configuration in properties file.
+        Simply We will change those changes in properties file then we have to push on the GIT.
+		So,from GIT that will be picked up all the configuration.
+ 

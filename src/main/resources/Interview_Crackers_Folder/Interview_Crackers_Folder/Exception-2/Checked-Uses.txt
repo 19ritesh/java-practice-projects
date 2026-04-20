@@ -1,0 +1,11 @@
+** CHECKED AND UNCHECKED USE CASES **
+__________________________________________________
+Checked Exception: If client can recover from an exception and would like to continue, use checked exception.
+
+Unchecked Exception: If a client can't do any thing after the exception, then raise unchecked exception.
+
+Example: If you are expected to do arithmetic operation in a method A() and based on the output from A(),
+ you have to another operation. If the output is null from method A() which you are not expecting during the 
+ run time, then you are expected to throw Null pointer Exception which is Run time exception
+
+https://stackoverflow.com/questions/27578/when-to-choose-checked-and-unchecked-exceptions#:~:text=Checked%20Exception%3A%20If%20client%20can,exception%2C%20then%20raise%20unchecked%20exception.

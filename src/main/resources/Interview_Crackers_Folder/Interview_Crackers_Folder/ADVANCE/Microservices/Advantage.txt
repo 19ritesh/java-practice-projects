@@ -1,0 +1,18 @@
+1  MICROSERVICE ADVANTAGE:-
+_____________________________
+**   Microservices are self-contained, independent deployment module.
+ *   Microservices are independently manageable services. It can enable more and more services as the need arises. 
+     It minimizes the impact on existing service.
+ *	 It is possible to change or upgrade each service individually rather than upgrading in the entire application.
+ *   Microservices follows the single responsibility principle.
+ *   The demanding service can be deployed on multiple servers to enhance performance.
+ *   Dynamic scaling.
+ *   Faster release cycle.
+ 
+2  DISADVANTAGE:-
+_____________________________
+**   Microservices has all the associated complexities of the distributed system.
+ *   There is a higher chance of failure during communication between different services.
+ *   Difficult to manage a large number of services.
+ *   Complex testing over a distributed environment.
+ *   The developer needs to solve the problem, such as network latency and load balancing. 

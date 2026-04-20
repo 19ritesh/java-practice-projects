@@ -1,0 +1,9 @@
+**  MUTABLE OBJECT AS A KEY:-
+_______________________________
+**  If We want to make a mutable object as key in hashmap, then We have to make sure that state change
+    for key object does not change the hash code of object.
+ *  For maintaing this we should compolsory maintain the contract of the hashcode() and equals().
+ *  For maintaing the contract, Compolsory we should override hashcode() and equal() method.
+
+   Ref:- https://howtodoinjava.com/java/collections/hashmap/design-good-key-for-hashmap/#:~:text=If%20you%20want%20to%20make,contract%20with%20equals()%20also. 
+	

@@ -1,0 +1,7 @@
+(1) DEADLOCK:-If 2 Threads are waiting for each other forever(without end) such type of
+                   situation(infinite waiting) is called dead lock. 
+				   
+ *  PREVENT:-
+
+(2) STARVATION:-If 2 Threads are waiting for each other and the waiting will be over at certain point is called
+                  deadlock.

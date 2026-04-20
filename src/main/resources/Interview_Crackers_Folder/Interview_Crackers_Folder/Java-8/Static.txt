@@ -1,0 +1,10 @@
+Static methods inside interface: -
+________________________________________________
+  ** From 1.8 version onwards in addition to default methods we can write  static methods also inside 
+     interface to define utility functions. 
+  ** Interface static methods by-default not available to the implementation classes hence by using 
+     implementation class reference we can’t call interface static methods.
+  ** We should call interface static methods by using interface name. 
+  ** As interface static methods by default not available to the implementation class,  overriding concept is not applicable. 
+  ** Based on our requirement we can define exactly same method in the implementation class, it’s valid but not overriding. 
+  ** From 1.8 version onwards we can write main() method inside interface and hence  we can run interface directly from the command prompt.

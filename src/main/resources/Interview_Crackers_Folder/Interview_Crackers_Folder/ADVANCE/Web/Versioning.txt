@@ -1,0 +1,10 @@
+** VERSIONING **
+________________________
+** Through a URI path – you include the version number in the URL path of the endpoint, for example, /api/v1/persons.
+ * Through query parameters – you pass the version number as a query parameter with a specified name,
+   for example, /api/persons?version=1.
+ * Through custom HTTP headers – you define a new header that contains the version number in the request.
+ * Through a content negotiation – the version number is included in the “Accept” header together with the
+   accepted content type. The request with cURL would look like:-
+   
+   curl -H "Accept: application/vnd.piomin.v1+Json" http://localhost:8080/api/persions

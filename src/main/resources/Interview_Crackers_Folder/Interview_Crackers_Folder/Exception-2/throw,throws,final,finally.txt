@@ -1,0 +1,27 @@
+(1) THROW STATEMENT: Sometime we can create exception object explicitly and we can hand over to the JVM
+      manually by using throw keyword. 
+ * In general we can use throw keyword for customized exceptions but not for predefined exceptions.
+ * After throw statement we can’t take any statement directly otherwise we will get compile time error with unreachable statement.  
+ * We can use throw keyword only for Throwable types otherwise we will get compile time 
+      error saying incomputable types. 
+	    
+(2) THROWS STATEMENT:-In our program if there is any chance of  raising checked exception compulsory
+          we should handle either by try catch or by throws keyword otherwise the code won’t compile.  
+  * Hence the main objective of “throws” keyword is to delicate the responsibility of exception handling
+     to the caller method. 
+  * “throws” keyword required only checked exceptions. Usage of throws for unchecked exception there is no use. 
+  * “throws” keyword required only to convenes complier. Usage of throws keyword doesn’t prevent abnormal termination of the program. 
+  * we can use throws keyword only for Throwable types otherwise we will get compile time error saying incompatible types
+  * In our program if there is no chance of rising an exception then we can’t  right catch block for that exception otherwise we will get compile time error saying exception.
+  
+(3) FINAL:- If a class declared as the final then child class creation is not possible. 
+  * If a method declared as the final then overriding of that method is not possible. 
+  * If a variable declared as the final then reassignment is not possible. 
+  
+(4) FINALLY:-It is block and we used this with try,catch and finally block.
+  * It is mainaly used for code clean up purpose.
+
+(5) FINALIZE:-It is a method which should be called by garbage collector always just before 
+               destroying an object to perform cleanup activities.   
+** NOTE:- To maintain clean up code finally block is recommended over finalize() method because 
+            we can’t expert exact behavior of GC. 			   

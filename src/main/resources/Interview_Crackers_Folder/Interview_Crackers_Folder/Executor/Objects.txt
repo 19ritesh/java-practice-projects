@@ -1,0 +1,25 @@
+**  5 Ways of creating executor framework.
+
+(1) NewFixedThreadPool:- Create a Thread with fixed no of Threads.
+  * This is used for execute any no of task.
+  * If tasks is more than the Thread,then Task will wait in the queue until free the Threads.
+  * E.g:- ThreadPoolExecutor executor=(ThreadPoolExecutor)Executors.newFixedThreadPool(10);
+  * SUBMIT:- executor.execute(task);
+  
+(2) CachedThreadPool:- It is used for creates new threads as needed.
+  * It will reuse previously constructed threads when they are available.
+  * DO NOT use this thread pool if tasks are long-running.It can bring down the system if the number of threads goes beyond what the system can handle
+  * E.g:- ThreadPoolExecutor executor=(ThreadPoolExecutor)Executors.newCachedThreadPool();
+  
+(3) Scheduled thread pool executor:- After submitting the task to executor,If We don't want to execute 
+    our task immediately or as soon as possible,then we can use this one.
+  * E.g:-ThreadPoolExecutor executor=(ThreadPoolExecutor)Executors.newScheduledThreadPool(10);
+  * SUBMIT- ScheduledFuture schedule(Runnable command, long delay, TimeUnit unit)
+
+(4) ThreadPoolExecutor:- Creates single thread to execute all tasks. Use it when you have only one task to execute.
+  * ThreadPoolExecutor executor=(threadPooleExecutor)Executors.newSingleThreadExecutor();
+  
+(5) Work stealing thread pool executor:- Creates a thread pool that maintains enough threads to support the given parallelism level.
+  * parallelism level means the maximum number of threads which will be used to execute a given task, 
+   at a single point of time.
+  * E.g:- ThreadPoolExecutor executor=(ThreadPoolExecutor)Executors.newWorkStealingPool(4); 

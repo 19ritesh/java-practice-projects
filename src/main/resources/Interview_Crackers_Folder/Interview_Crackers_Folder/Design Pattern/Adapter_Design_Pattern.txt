@@ -1,0 +1,72 @@
+** STRUCTURAL:- Adapter Design Pattern(Wrapper Design Pattern):-
+_______________________________________________________________________
+** Introduction:-
+_______________________
+** Suppose that i just want to connect my mobile memory cad with the my laptop.
+** We can't connect my memory card with my mobile directly.For Connect we have requirement of card reader.
+** By using card reader we can connect my mobile memory with laptop.
+** That card reader is nothing but ADAPTER design pattern.
+
+** Definition :-
+__________________________
+** Adapter design pattern says that "Two unrelated interfaces can work together".
+** And the object which joins these unrelated interfaces is called Adapter.
+				 
+** Where to use Adapter Design Pattern?	
+______________________________________________
+** Suppose that we are using a class and that class doesn't meet with the requirement of an interface.
+   For E.g:- If we want to read the System input through command prompt then we will use this code:-
+               BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			   System.out.print("Enter String");
+			   String s = br.readLine();
+			   System.out.print("Enter input: " + s);
+			   
+** Problem:- Now,Here System.in provides the byte stream where BufferReader expects the Character Stream.
+                  How they will work together??
+				  
+** Soln:-    This is the ideal situation where we can use the adapter.
+             And InputStreamReader does exactly same thing.
+             InputStreamReader working here as a adapter between BufferedReader and System.in.
+			 
+			 
+			 
+** BufferedReader:-    It is used for read the input from source as character stream.
+** InputStreamReader:- It is used for read the input from source as byte stream. 
+			 
+			 
+			 
+** How much work the Adapter Pattern should do?
+____________________________________________________
+** It can do only that much work so can both incompatible interface can adapt each other and that's it.		 
+	
+
+** Existing implementation of UserBuilder:-
+____________________________________________________
+** java.util.Arrays#asList() - It accept multiple String and returns a list of input Strings.
+		 
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			   

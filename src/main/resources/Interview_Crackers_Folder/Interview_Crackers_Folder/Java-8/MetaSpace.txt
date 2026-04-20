@@ -1,0 +1,7 @@
+(1)  PERMGEN:-(i)PermGen (Permanent Generation) is a special heap space separated from the main memory heap.
+     (ii) JVM Contains here:-Static content, primitive variables.
+	 
+(2)  METASPACE:-(1)it has replaced the older PermGen memory space.
+     (2)Garbage collector now automatically triggers the cleaning of the dead classes once the class 
+	     metadata usage reaches its maximum metaspace size.
+		 with this improvement, JVM reduces the chance to get the OutOfMemory error.

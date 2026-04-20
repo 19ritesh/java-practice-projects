@@ -1,0 +1,266 @@
+__________________________________________________________________________________________________________________________________
+  Annotations:-                                            |              XML:- 
+___________________________________________________________|______________________________________________________________________
+ ** All the information is in a single file(No nee         |  ** Clear seperation between the POJO and its          
+	open two files to configure a given behaviour.)        |       behaviour.
+ ** Table name we have to specify with collection          |   ** Tables name we have to specify with tags which
+     table.                                                |      are representing collections called
+	 E.g:-@CollectionTable(name="xx                        |
+ **  For Foreign key:-                                     |
+     @JoinColumn(name="sid")                               |   **  For foreign key:-
+	                                                       |        <key column="sid">
+	         											   |																					  ** Abstract class can talk about state of object.
+___________________________________________________________|________________________________________________________________________________
+
+** Stored Procedure:-
+__________________________________________________________________________________________________________________________________
+** A group of one or more database statements stored in the database.
+** And it is handled from remote program or another stored procedure. 
+** And its contain query.
+** Eg:- create procedure selectAllCustomers As 
+         select * from customers Go;
+     * Exec selectAllCustomers;
+____________________________________________________________________________________________________________________
+Trigger:-
+__________________________________________________________________________________________________________________________________ 
+** Trigger are stored program,which are automatically executed when some event occurs.
+   E.g:- create trigger stud_marks 
+   before INSERT 
+   on 
+   Student 
+   for each row 
+   set Student.total = Student.subj1 + Student.subj2 + Student.subj3, Student.per = Student.total * 60 / 100;
+____________________________________________________________________________________________________________________
+What is ORM:-
+_______________________________________________________________________________________________________________________
+** Object relational mapping.
+** It is programming strategy.
+** Where we can simplifies data creation,manipulation and data access.
+____________________________________________________________________________________________________________________
+Core Interface of Hibernate:-
+_______________________________________________________________________________________________________________________   
+** Configuration 
+** Sesion Factory
+** Session
+** Transaction
+** Query
+** Criteria
+____________________________________________________________________________________________________________________
+What is Session Factory:-
+_______________________________________________________________________________________________________________________   
+** Sessionfactory provides the instance of session>It is the factory session.
+** It holds the data of 2nd level cache that is not enabled default.
+** Org.hibernate.sessionFactory interface provides factory method to get session object.
+____________________________________________________________________________________________________________________
+Difference between session and Sessionfactory:-
+_______________________________________________________________________________________________________________________  
+
+
+
+
+____________________________________________________________________________________________________________________
+What is Transaction:-
+_______________________________________________________________________________________________________________________   
+** The Transaction object specifies the automic unit of work. It is optional.
+** org.hibernate.transaction interface provides methods for transaction management.
+____________________________________________________________________________________________________________________
+Connection Provider:-
+_______________________________________________________________________________________________________________________
+** It is a factory of JDBC connections.
+** It abstract the application from driverManager or data source.It is optional.
+____________________________________________________________________________________________________________________
+Transaction Factory:-
+_______________________________________________________________________________________________________________________
+** It is a factory of Transaction.
+** It is optional.
+____________________________________________________________________________________________________________________
+Is session a Thread safe object:-
+_______________________________________________________________________________________________________________________   
+** No,Session is not Thread safe object;
+** Many object can access Thread objects or we can share it between threads.
+__________________________________________________________________________________________________________________________________
+ 
+  Save:-                                                   |                               Persist :- 
+___________________________________________________________|______________________________________________________________________
+ ** Returns the identifier(serializable)of the instance    | ** Return nothing because its return type is void.          
+		                                                   |          																																  
+ ** Public serializable save (Object o)                    | ** public void persist(Object o)
+___________________________________________________________|_________________________________________________________   	                 
+ 
+ 
+ get():-                                                   |                               load():- 
+___________________________________________________________|______________________________________________________________________
+ ** Returns null if object is not found.                   | ** Throws ObjectNotFound exception if object is
+                                                           |     not found.
+		                                                   |          																																  
+ ** get() will always hit the db.                          | ** load() doesn't hit the database.
+ ** It returns real object not proxy.                      | ** It returns proxy object.
+ ** It should be used if we are not sure about the         | ** It should be used if we are sure that interface
+     existence of instance.                                |      exists.
+___________________________________________________________|_________________________________________________________   	                 
+
+** What is the new in Hibernate 4.0:-
+__________________________________________________________________________________________________________________________________
+** Redesign session factory building.
+** Move to gradle for builds.
+** Support for multi tent databases.
+** Migration of logging framework(using jboss logging).
+** JDK 1.6 is base line(JDBC4).
+** Introduction of services.
+
+
+
+What are the states of the objects in Hibernate:-
+_______________________________________________________________________________________________________________________
+** There are 3 states of object(instance)in hibernate:-
+** 1. Transient:-  The object is in a transient state if it is just created but has no primary key(identifier)
+                   and not associated with a session.
+** 2. Persistent:- The object is in a persistent state if a session is open,and you just saved the instance				  
+				   in the database or retrieved the instance from the database.
+** 3. Detached:-   The object is in a deteached state if a session is closed.After deteached state,the object
+                   comes to persistent state if we will call lock() or update().
+
+What are the Inheritance mapping strateigies:-
+_______________________________________________________________________________________________________________________
+** There are 3 ways:-
+** Table per Hiererchy.
+** Table per concrete class.
+** Table per class.
+
+How to make an immutable class in Hibernate:-
+_______________________________________________________________________________________________________________________
+** If we mark class as mutable ="false"; the class will be treated as an immutable class.
+** By default it is mutuble="true";
+
+What is automatic dirty checking in hibernate:-
+_______________________________________________________________________________________________________________________
+** The automatic dirty checking features of hibernate,calls update statement automatically on the objects
+   that are modified in transaction.
+** It abstract the application from driverManager or data source.It is optional.
+      E.g:-
+   ** Sessionfactory factory=cfg.buildSessionFactory();
+      Session session1=factory.openSession();
+	  Transaction tx=session2.beginTransaction();
+	  Employee e1=(Employee)session1.get(Employee.class,Integer.valueOf(101));
+	  e1.setSalary(70000);
+	  tx.commiy();
+	  session1.close();
+	  
+   ** Here,after getting employee instance e1 and we are changing the state of e1.
+   ** After changing the state,we are commiting the transaction.In such case,the state will be updated
+      automatically,This is known as dirty checking in hibernate.
+	  
+______________________________________________________________________________________________________________________________
+	  
+Is it possible to perform collection mapping with One-To-One and Many-to-Many:-
+_______________________________________________________________________________________________________________________
+** No,Connection mapping can only performed with One-To-Many and Many-To-Many.
+
+______________________________________________________________________________________________________________________________
+	  
+What is HQL(Hibernate query language):-
+_______________________________________________________________________________________________________________________
+** It is known as object-oriented-query language.It islike a structured querylanguage(sql).	  
+
+______________________________________________________________________________________________________________________________
+
+	  
+The main advantage of Hql over Sql is:-
+_______________________________________________________________________________________________________________________
+** We don't need to learn sql.
+** Database independent.
+** Simple to write a query.	
+
+______________________________________________________________________________________________________________________________
+	  
+Hibernate Transaction Management Example:-
+_______________________________________________________________________________________________________________________
+** A Transaction simply represents a unit of work.In such case,if one step fails the whole transaction
+   fails(Which is termed as atomicity).A transaction can be described by ACID properties(Atomcity,Consistency,
+   isolation and durability).
+
+______________________________________________________________________________________________________________________________
+	  
+Transaction interface in Hibernate:-
+_______________________________________________________________________________________________________________________
+** In Hibernate framework,we have transaction interface that defines the unit of work.It maintains abstraction
+   from the transaction implementation.(JTA,JDBC).
+** A Transaction is associated with session and instaintiated by calling  session.beginTransaction().   
+      
+** The Methods of Transaction interface are as follows:-
+    ** void begin():- Starts a new Transaction.
+    ** void commit():-Ends the unit of work unless we are in  flushMode.NEVER.
+    ** void rollback():- Forces this transaction to rollback.
+	** boolean isAlive():- Checks if the transaction is still alive.
+	** boolean wasCommited():- Checks if the transaction is commited successfully.
+	** boolean wasRolledBack():- Checks if the transaction is rolledback successfully.
+	
+______________________________________________________________________________________________________________________________
+	  
+Hibernate Named Query:-
+_______________________________________________________________________________________________________________________
+** The hibernate named query is a way to use any query by some meaningful name.It is like alias	names. 
+** The Hibernate framework provides the concept of named queries so that application programmer need 
+   not to scatter queries to all java code.
+   
+** There two ways to define that named query in hibernate:-
+   1. By Annotation.
+   2. By Mapping file.
+
+** Hibernate named query by annotation:-
+____________________________________________________________________________________________________________________
+** If We want to use named query in hibernate,we need to have knowledge of @NamedQueries and @NamedQuery annotations.
+** @NamedQueries:- It's is used to define the multiple named queries.
+** @namedQuery:- Annotation is used to define the single named query. 
+
+     E.g:- @namedQueries
+           { 
+             @NamedQuery(name="findEmployeeName",query="from Employee a where e.name=name")
+               } 
+                Note:- We will use this topof the class.
+
+______________________________________________________________________________________________________________________________
+What is JPA:-
+_______________________________________________________________________________________________________________________
+** Java persistence API is a collection of classes and methods to presently store the vast amounts of data
+                          into a database which is provided by oracle corporation.
+** USE:- To reduce the burden of writing codes for relational object management a programmer follows 
+         the JPA provider framework,which allows easy interaction with db instance.		
+_____________________________________________________________________________________________________________________________
+** JPA EntityManager:-
+____________________________________________________________________________________________________________________
+** Hibernate provides implementation of JPA interfaces EntityManagerFactory and EntityManager.
+** JPA Entity Manager is used to access a database in a particular application.It is used to manage
+   persestient entity instances to find entities by their primary key identity and to query over all entities.		 
+   				
+      
+   	
+	
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   

@@ -1,0 +1,24 @@
+(1) HASHMAP:-(1)It is a not thread safe.
+    (ii)  Relatively performance is high because Threads are not required to wait to operate on Hashmap.
+	(iii) While one Thread iterating Hashmap the other Threads are not allowed to modify Map objects otherwise
+	      We will get Runtime Exception saying ConcurrentModificationException.
+	(iv)  Iterator of HashMap is fail-fast and it throws ConcurrentModificationException.
+    (v)	  Null is not allowed for both keys and values.
+	(vi)  Introduced in 1.2 version.
+
+(1) CONCURRENT-HASHMAP:-(1)We will get thread safety without locking total map object just with bucket level lock.
+    (ii) At a time multiple threads are allowed to operate map object in safe way.
+	(iii)Read operation can be performed without lock but write operation can be performed with bucket level lock.
+    (iv) While one thread iterating map object,the other threads are allowed to modify map and We won't get
+         concurrent modification exception.
+     (v) Null is not allowed for both keys and values
+     (vi)Introduced in 1.5 version.
+
+(2) SYNCHRONIZED MAP:-(1)We will get thread safety by locking whole map object.
+    (ii) At at a time only one thread is allowed to perform any operation on Map object.
+	(iii)Every read and write operations require total Map object lock.
+	(iv) While one threaditerating Map object,yhe other Threads are not allowed to Modify Map otherwise We will
+	     get ConcurrentModificationException.
+	(v)  Null is allowed for both keys and values.
+    (v1) Introduced in 1. version.	
+    

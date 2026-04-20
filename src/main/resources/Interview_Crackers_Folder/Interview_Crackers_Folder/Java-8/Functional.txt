@@ -1,0 +1,30 @@
+**** Functional Interface:- ****
+ ____________________________
+ ** If an interface contain only one abstract method, such type of interfaces are called functional
+       interfaces and the method is called functional method or single abstract method (SAM). 
+ **  Ex: 
+ **  1) Runnable - It contains only run() method
+     2) Comparable - It contains only compareTo() method  
+	 3) ActionListener - It contains only actionPerformed() 
+	 4) Callable - It contains only call() method 	
+ ** Inside functional interface in addition to single Abstract method (SAM) we write any number of default and static methods.
+ ** In Java 8, Sun Micro System introduced @Functional Interface annotation to specify that the interface is Functional Interface. 
+ ** Inside Functional Interface we can take only one abstract method, 
+    if we take more than one abstract method then compiler raise an error message that is called we will get compilation error.  
+ ** Inside Functional Interface we have to take exactly only one abstract method.If we are not declaring 
+     that abstract method then compiler gives an error message.
+ 
+ **Functional Interface with respect to Inheritance:-
+______________________________________________________  
+ ** If an interface extends Functional Interface and child interface doesn’t contain any abstract method 
+     then child interface is also Functional Interface.
+ ** In the child interface we can define exactly same parent interface abstract method. 
+ ** In the child interface we can’t define any new abstract methods otherwise child interface won’t be Functional Interface
+     and if we are trying to use @Functional Interface annotation then compiler gives an error message. 
+ 
+ ** Functional Interface Vs Lambda Expressions:-
+________________________________________________ 
+ ** Once we write Lambda expressions to invoke it’s functionality, then Functional Interface is required. 
+    We can use Functional Interface reference to refer Lambda Expression.  Where ever Functional Interface concept
+	is applicable there we can use Lambda Expressions.
+ 

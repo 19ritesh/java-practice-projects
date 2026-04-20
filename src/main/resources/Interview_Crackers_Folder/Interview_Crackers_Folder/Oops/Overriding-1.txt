@@ -1,0 +1,26 @@
+(1) OVERRIDING:-In Case of Overriding both methods should be same name but different arguments.
+ 
+   (i)  In overriding method resolution is always takes care by JVM based on runtime object hence overriding 
+        is also considered as runtime polymorphism or dynamic polymorphism or late binding. 
+   (ii) Whatever the Parent has by default available to the Child through inheritance, if the Child is 
+        not satisfied with Parent class method implementation then Child is allow to redefine that Parent
+	    class method in Child class in its own way this process is called overriding. 
+    
+  RULES:-(1)Until 1.4 version the return types must be same but from 1.5 version onwards co-variant return types are allowed.   
+  (ii)  Co-variant return type concept is applicable only for object types but not for primitives. 
+  (iii) Private methods are not visible in the Child classes hence overriding concept is not applicable for
+        private methods. Based on own requirement we can declare the same Parent class private method in 
+		child class also. It is valid but not overriding. 
+		
+(2)  ACCESS MODIFIER:-(i) Parent class FINAL methods we can’t override in the Child class. 	
+    (ii) Parent class NON FINAL methods we can override as final in child class. 
+    (iii)We should override Parent class ABSTRACT methods in Child classes to provide implementation.
+	(iv) We can override Parent class NON ABSTRACT method as abstract to stop availability of 
+	     Parent class method implementation to the Child classes. 
+	(v)  While overriding we CAN'T’ REDUCE the SCOPE of access modifier.
+	
+(3)  EXCEPTION:-(i)While overriding if the child class method throws any checked exception compulsory the parent 
+     class method should throw the same checked exception or its parent otherwise we will get compile time error. 
+     (ii)But there are no restrictions for un-checked exceptions 
+	
+	 

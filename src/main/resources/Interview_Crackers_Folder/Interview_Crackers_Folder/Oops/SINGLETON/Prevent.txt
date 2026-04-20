@@ -1,0 +1,15 @@
+** PREVENT SINGLETON CLASS:-
+_____________________________________
+*Q. How to prevent singleton pattern reflection??.
+    
+**  1. Enums:- Enums Dont have any constructor.(Reflection).
+  * So,We can't invoke the enum directly by ourself.
+  * J.V.M handles creation and invocation of enum constructor internaly.
+  * Enum's don't have any constructor,so its not possible that reflection will access singleton.
+     Hence,Reflection can't break the singleton property in case of enums.
+		  
+  * 2. Serialization:- By using Read and Resolve Method.
+
+  * 3. Cloning: - Overide clone() throw Exception.
+  * To overcome this issue override clone() and throw an exception from clone() method that is clone not supported exception.  
+	 Now,whenever user try to create clone of singleton object,it will throw exception and hence our class remains singleton.

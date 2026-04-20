@@ -1,0 +1,8 @@
+@Autowired:-                                               |                        @Inject:- 
+___________________________________________________________|______________________________________________________________________
+** But its available before spring 3.0                     | ** It is obly available from Spring 3.0 only.
+                                                           |
+** It is spring's own dependency.                          | ** It is part for a new java technology called CDI.		                                                   |          																																                                  |
+                                                           |    that defines a standard for dependency injection
+                                                           |     similar to spring.
+___________________________________________________________|___________________________________________________________|

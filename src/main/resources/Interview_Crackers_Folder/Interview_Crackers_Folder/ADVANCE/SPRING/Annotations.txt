@@ -1,0 +1,17 @@
+** Spring Annotations:-
+__________________________
+** @Configuration(Class level):- This annotation is used for that a class declares one or more bean methods.This classes are processed
+                                  by spring container to generate bean definations and service requests for those beans at runtime.
+** @Bean(Method level):- It is used for a method produces a bean to be managed by the spring container.
+                                        * It is also used with parameters like name ,init method and destroy method.
+** @PreDestroy & PostDestroy(Method level):- This is the alternative way for bean init method and bean destroy method.	
+                                        * It can be used when bean class defined by us.
+** @ComponentScan(Class leval):- It is used with @Configuration annotaion to specify the packages that we want to scanned.
+** @Component(Class level):- The @Component annotation indicates that an annoted class is a component.	
+** @PropertySource(Class level):- Provide a simple declarative mechanism for adding a property source to spring environment.
+** @Transactional(Method level):- It is used for handle the transaction management.
+** @EnableWebSecurity(Class level):- It is used with @Configuration.Wherever we used Spring Security there we used this annotation.
+** @Autowired:-(Property level or method level):- It is used for automatic injection of beans.
+** @Qualifier(Property level):- It is used with the @Autowired. When we have two or more configured for same type.
+** @SpringBootApplication(Class level):- It is the combination of three anotations.@EnableAutoConfiguration,@ComponentScan,@Configuration.
+** @PathVariable:- This can be used to handle template variables in the request URI mapping,  and use them as method parameters.

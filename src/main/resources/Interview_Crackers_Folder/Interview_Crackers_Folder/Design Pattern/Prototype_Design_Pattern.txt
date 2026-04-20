@@ -1,0 +1,8 @@
+** CREATIONAL:- Prototype Design Pattern
+_______________________________________________________________________________
+** We will clone the object instead of creating new one,and we will customized according to the requirement.
+
+** Advantage:-
+______________________________________________
+** It reduces the need of sub-classing.
+** We can perform add or remove at Runtime only.

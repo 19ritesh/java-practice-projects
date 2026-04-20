@@ -1,0 +1,16 @@
+(1)  Two Threads can communicate with each other by using wait(), notify() and notifyAll() methods.
+(2)  The Thread which is excepting updation it has to call wait() method and the Thread 
+     which is performing updation it has to call notify() method. After getting notification the
+	 waiting Thread will get those updations. 
+(3)	 wait(), notify() and notifyAll() methods are available in Object class but not in Thread
+       class because Thread can call these methods on any common object. 
+(4)  To call wait(), notify() and notifyAll() methods compulsory the current Thread should be owner of that
+     object that is current Thread should has lock of that object that is current Thread should be in 
+	 synchronized area. Hence we can call wait(), notify() and notifyAll() methods only from synchronized area
+	 otherwise we will get runtime exception saying IllegalMonitorStateException.
+(5)  Once a Thread calls wait() method on the given object 1st  it releases the lock of that object
+       immediately and entered into waiting state. 
+(6)  Once a Thread calls notify() (or) notifyAll() methods it releases the lock of that object but
+       may not immediately. 
+(7)  Except these (wait(),notify(),notifyAll()) methods there is no other place(method) where
+       the lock release will be happen	   

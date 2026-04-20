@@ -1,0 +1,11 @@
+(1)  HASHSET:-(i)The underlying data structure is Hashtable. 
+     (ii) Insertion order is not preserved.
+	 (iii)Introduced in 1.2 v. 
+	 
+(2)  LINKED-HASHSET:-(i)The underlying data structure is a combination of LinkedList and Hashtable.
+    (ii) Insertion order is preserved. 
+    (iii)Introduced in 1.4v.
+
+  NOTE:- Note: LinkedHashSet and LinkedHashMap commonly used for implementing “cache applications”
+         where insertion order must be preserved and duplicates are not allowed. 	
+	 

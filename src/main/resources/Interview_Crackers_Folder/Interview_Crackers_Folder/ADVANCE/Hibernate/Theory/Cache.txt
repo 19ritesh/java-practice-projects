@@ -1,0 +1,12 @@
+** CACHING:- Caching improve the performance by pooling object in the cache.
+
+(1) FIRST LEVEL CACHE:-(i)Session holds the first level cache.
+    (ii) It is enabled by default.
+	(iii)In this case,data is not available into the entire application.
+	(iv) An application can use Many session object.
+	
+(2)	SECOND LEVEL CACHE:-(i)Session factory holds the 2nd level cache data.
+    (ii)  The data stored in 2nd level cache will be available to entire application.
+	(iii) We need to enable 2nd level cache explicitly.
+	(iv)  Hibernate 2nd level cache uses common cache for all session object of a session factory.
+	(v)   It is useful if We have multiple session objects from a session factory.

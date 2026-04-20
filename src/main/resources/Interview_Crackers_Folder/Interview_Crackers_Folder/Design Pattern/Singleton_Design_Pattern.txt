@@ -1,0 +1,43 @@
+** CREATIONAL:- Singleton Design Pattern
+_______________________________________________________________________________
+** We will create only one instance and We will perform all the operations by using that instance only.
+
+** Advantage:-
+______________________________________________
+** It will saved the memory beacuse object is not creating on each request.
+** We will create only one object and we will reuse this object again and again whenever its required.
+
+** There are two forms of singleton design pattern
+_______________________________________________________________________________
+** Early Instantiation:- Creation of instance at load time.
+** Lazy Instantiation :- Creation of instance when it is required.
+
+ ** Early Instantiation:
+______________________________________________
+** We will create the instance of the class at the time of declaring static member of the class.
+** So this instance will be execute at the time of class loading. 
+
+
+** Lazy Instantiation:
+______________________________________________
+** We will create the instance of the class by using synchronized method or synchronized block.
+** So We can create this instance whenever its required.
+
+** Usage of Singleton design pattern:-
+______________________________________________
+** Singleton design pattern mostly used in multi-threaded or database application.
+** It is used in Thread pool or Hibernate Configuration.
+
+* Existing implementation of Singleton:-
+____________________________________________________
+** java.awt.Desktop#getDesktop()
+** java.lang.Runtime#getRuntime()
+
+
+
+
+
+
+
+
+

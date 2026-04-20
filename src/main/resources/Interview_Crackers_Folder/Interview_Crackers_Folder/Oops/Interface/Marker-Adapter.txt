@@ -1,0 +1,15 @@
+** MARKER INTERFACE **
+______________________________
+** If an interface doesn’t contain any methods and by implementing that interface if our object gets some ability
+   such type of interfaces are called Marker interface (or) Tag interface (or) Ability interface. 
+   
+** ADAPTER CLASS **
+______________________________
+** Adapter class is a simple java class that implements an interface only with empty implementation
+   for every method.    
+ * If we implement an interface directly for each and every method compulsory we should provide implementation
+   whether it is required or not. This approach increases length of the code and reduces readability.  
+ * We can resolve this problem by using adapter class. 
+ * Instead of implementing an interface if we can extend adapter class we have to provide implementation 
+   only for required methods but not for all methods of that interface.  
+ * This approach decreases length of the code and improves readability.   

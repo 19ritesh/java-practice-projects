@@ -1,0 +1,12 @@
+(1) PRIORITY-QUEUE:-
+   (1) We can use PriorityQueue to represent a group of individual objects prior to processing according to
+       some priority. 
+   (2) The priority order can be either default natural sorting order (or) customized sorting order 
+       specified by Comparator object.
+   (3) If we are depending on default natural sorting order then the objects must be homogeneous and Comparable
+       otherwise we will get ClassCastException.
+   (4) If we are defining our own customized sorting order by Comparator then the objects need not be
+       homogeneous and Comparable.
+   (5) Duplicate objects are not allowed.
+   (6) Insertion order is not preserved but all objects will be inserted according to some priority. 
+   (7) Null is not allowed even as the 1st element for empty PriorityQueue. 

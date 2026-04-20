@@ -1,0 +1,28 @@
+** BEHAVIORAL:- Strategy Design Pattern(Dependents or Publish-Subscribe)
+_______________________________________________________________________________
+** It says choose a specific implementation of algorithm at run time out of multiple implementation of 
+     same task.
+** Implementation are intechangable based on a task implementation and picked without 
+      disturbing application workflow.
+
+
+** Advantage:-
+_______________________________________________________________________________
+** We can define each behaviour of the application in seperate class.
+** It makes our application easier,so our application can extend any behaviour without changing the application.
+
+** Problem:-
+_______________________________________________________________________________
+** I just want perform custom sorting of Pojo class,where we want to sort based on firstName.
+** What we will do,We will create a custom class where we can customized our sorting algorithms.
+** And in main class We will simply call Collections.sort(s1,new CustomClass());
+** We know very well that CustomClass is seperate class where we implemented Comporator interface and 
+   written custom sorting logic.(This is nothing but Strategy Design pattern).
+** This design pattern follow Open/Closed principal where We are able Open for extension and 
+   Closed for Modification.
+
+** Existing implementation of UserBuilder:-
+____________________________________________________
+** Collections.sort(list,Comparator);
+		 
+   

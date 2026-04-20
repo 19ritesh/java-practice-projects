@@ -1,0 +1,29 @@
+
+                  ** String:-                           |          ** StringBuffer:-	  
+_______________________________________________________|________________________________________________________________	  
+** String object is immutable                          | ** StringBuffer is mutable.
+** It is implement serializable and comparable         | ** It is implementing only serializable interface.
+   interface.                                	       | 
+** Inside String class toString() and .equals()        | ** Inside StringBuffer toString() is overrided only.
+   are overrided.                                      |
+** We can create String object without using new       | ** We can create StringBuffer object only by 
+   operator.                                           |      new operator.
+** String not maintain internally buffer.              | ** StringBuffer internally using buffer only.
+** String is not Synchronized.                         | ** StringBuffer is Synchronized.
+** We can add two String by using + opeartor.          | ** We can't add two StringBuffer by using + operator.
+                                                       |
+_______________________________________________________|___________________________________________________________________  
+
+** StringBuffer:-                                      |           ** StringBuilder:-
+_______________________________________________________|_________________________________________________________________ 
+** Every method present in StringBuffer is             | ** No method present in StringBuilder is synchronized.  
+   synchronized.                                       |
+** At a time only one thread is allow to operate on    | ** Multiple Threads are allowed to  operate 
+   the StringBuffer object hence StringBuffer          |    simultaneously on the StringBuilder object hence 
+   object is Thread safe.                              |    StringBuilder is not ThreadSafe.
+** It increases waiting time of the thread and hence   | ** Threads are not required to wait and hence    
+   relatively performance is low.                      |    relatively performance is high.
+** Introduced in 1.0 version.                          | ** Introduced in 1.5 versions.  
+_______________________________________________________|____________________________________________________________________
+ ** Difference between String and StringBuffer:-
+_____________________________________________________________________________________________________________________________________

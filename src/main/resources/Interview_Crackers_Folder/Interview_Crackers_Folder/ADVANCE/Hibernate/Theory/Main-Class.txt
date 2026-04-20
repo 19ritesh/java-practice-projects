@@ -1,0 +1,21 @@
+** Main Class:-
+__________________
+** public static void main(String[] str)
+   {
+   SessionFactory factory=new Configuration().configure("hibernate.cfg.xml").addAnnotedClass(Student.class).
+                                                                      buildSessionFactory();
+   Session session=factory.getCurrentSession();																  
+																	   
+		try
+{
+Student tempStudent=new Student("perl","wall",ritkrs91@gmail.com);
+        session.beginTransaction();
+		session.save(tempStudent);
+		session.getTransaction().commit();
+}		
+     finally
+	 {
+	    factory.close();
+	 }
+																	  
+   }

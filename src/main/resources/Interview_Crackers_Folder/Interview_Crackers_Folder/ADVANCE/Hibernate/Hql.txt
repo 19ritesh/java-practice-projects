@@ -1,0 +1,12 @@
+What is HQL(Hibernate query language):-
+_______________________________________________________________________________________________________________________
+** It is known as object-oriented-query language.It islike a structured querylanguage(sql).	  
+
+______________________________________________________________________________________________________________________________
+
+	  
+The main advantage of Hql over Sql is:-
+_______________________________________________________________________________________________________________________
+** We don't need to learn sql.
+** Database independent.
+** Simple to write a query.

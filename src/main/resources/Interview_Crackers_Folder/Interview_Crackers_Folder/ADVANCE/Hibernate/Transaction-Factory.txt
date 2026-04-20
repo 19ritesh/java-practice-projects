@@ -1,0 +1,21 @@
+Hibernate Transaction Management Example:-
+_______________________________________________________________________________________________________________________
+** A Transaction simply represents a unit of work.In such case,if one step fails the whole transaction
+   fails(Which is termed as atomicity).A transaction can be described by ACID properties(Atomcity,Consistency,
+   isolation and durability).
+
+______________________________________________________________________________________________________________________________
+	  
+Transaction interface in Hibernate:-
+_______________________________________________________________________________________________________________________
+** In Hibernate framework,we have transaction interface that defines the unit of work.It maintains abstraction
+   from the transaction implementation.(JTA,JDBC).
+** A Transaction is associated with session and instaintiated by calling  session.beginTransaction().   
+      
+** The Methods of Transaction interface are as follows:-
+    ** void begin():- Starts a new Transaction.
+    ** void commit():-Ends the unit of work unless we are in  flushMode.NEVER.
+    ** void rollback():- Forces this transaction to rollback.
+	** boolean isAlive():- Checks if the transaction is still alive.
+	** boolean wasCommited():- Checks if the transaction is commited successfully.
+	** boolean wasRolledBack():- Checks if the transaction is rolledback successfully.

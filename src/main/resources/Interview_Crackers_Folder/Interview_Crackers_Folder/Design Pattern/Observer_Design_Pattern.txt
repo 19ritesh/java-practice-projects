@@ -1,0 +1,26 @@
+** BEHAVIORAL:- Observer Design Pattern(Dependents or Publish-Subscribe)
+_______________________________________________________________________________
+** Just define One-to-One dependency so that one object states changes,all other dpendents get notified 
+    and updated automatically. 
+** This pattern is also known as Dependents or Publish-Subscribe pattern.	
+
+
+** Advantage:-
+_______________________________________________________________________________
+** It provides loosely coupling between objects and the observer.
+
+
+** Loosely Coupling:-One interface reference variable can hold different types of implementation class memories.
+                         E.g:-(GSM Mobile):-Any network sim is loosely coupled with the handset.
+					 
+** Tightly Coupling:- One interface referance variable can hold only one types of implementation class memories.
+                          E.g:-(CDMA Mobile):-Reliance sim is tightly coupled with that CDMA mobile set.     					 
+
+
+** Where to use Observer Design Pattern?	
+______________________________________________
+** We can use Observer design pattern anywhere while developing any social media platform.
+** Suppose that if a person updated his status on Twitter,then the other people who is following
+     that person get notified and they are able to see his status.
+** A follower can follow or unfollow a person at any time.
+** After unfollow the person is no longer to get the notifications in future.	 

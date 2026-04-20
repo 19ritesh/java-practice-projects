@@ -1,0 +1,20 @@
+NAMING CONFLICTS: 
+______________________
+** METHODS:- **
+______________________
+ *  If two interfaces contain a method with same signature and same return type in the implementation
+    class only one method implementation is enough. 
+ *  if two interfaces contain a method with same name but different arguments in the implementation class
+    we have to provide implementation for both methods and these methods acts as a overloaded methods.
+ *  If two interfaces contain a method with same signature but different return types then it is 
+    not possible to implement both interfaces simultaneously. 	
+
+Q. We can’t write any java class that implements both interfaces simultaneously. Is a java class
+   can implement any no. Of interfaces simultaneously? 
+Ans:- Yes, except if two interfaces contains a method with same signature but different return types. 
+
+** VARIABLES **
+______________________
+ * Two interfaces can contain a variable with the same name and there may be a chance variable naming 
+   conflicts but we can resolve variable naming conflicts by using interface names.   
+	

@@ -1,0 +1,20 @@
+** ANNOTATIONS WORK INTERNALLY:-
+_______________________________________
+**  Annotations are used to provide metadata for te java code, even though they are not part of the program itself.
+**  Metadata is data about data.
+**  So Annotations are metadata for source code.
+**  Classes, methods, variables, parameters and packages can be annotated in Java.
+
+************ The Annotations gives meaningful information such as: ************
+______________________________________________________________________________
+** (i)  Compiler instructions : Annotations can be used by the compiler to detect errors or suppress warnings.
+** (ii) Build-time instructions : Software tools can process annotation information to generate code, XML files, and so forth.
+** (iii)Runtime instructions : Some annotations are available to be examined at runtime.
+
+**  Java has three built-in annotations:
+___________________________________________
+**  @Override : Checks that the method is an override. Causes a compile error if the method is not found in one
+    of the parent classes or implemented interfaces.
+**  @SuppressWarnings : Instructs the compiler to suppress the compile time warnings specified in the
+    annotation parameters.
+**  @Deprecated : Marks the method as obsolete. Causes a compile warning if the method is used.

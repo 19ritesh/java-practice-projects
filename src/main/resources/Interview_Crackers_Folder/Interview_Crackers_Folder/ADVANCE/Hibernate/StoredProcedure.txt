@@ -1,0 +1,8 @@
+** Stored Procedure:-
+__________________________________________________________________________________________________________________________________
+** A group of one or more database statements stored in the database.
+** And it is handled from remote program or another stored procedure. 
+** And its contain query.
+** Eg:- create procedure selectAllCustomers As 
+         select * from customers Go;
+     * Exec selectAllCustomers;

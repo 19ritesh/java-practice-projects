@@ -1,0 +1,5 @@
+What is Transaction:-
+_______________________________________________________________________________________________________________________   
+** The Transaction object specifies the automic unit of work. It is optional.
+** org.hibernate.transaction interface provides methods for transaction management.
+____________________________________________________________________________________________________________________

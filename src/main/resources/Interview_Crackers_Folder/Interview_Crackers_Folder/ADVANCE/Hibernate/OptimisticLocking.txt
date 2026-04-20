@@ -1,0 +1,22 @@
+(1)  OPTIMISTIC LOCKING:-
+     (i)  When we develope web application,It is necessary to properly manage concurrent access database.
+	      It means we should be able to manage multiple transactions efficiently and without risk of error.
+		  To ensure this data remains consistent between readings and simultaneous updates.
+		  
+		  To overcome this problem we will use optimistic locking:
+		  
+		  OPTIMISTIC:-
+		  We can use the optimistic locking mechanism that is provided by the JPA.
+		  By using optimistic multiple updates to the same data at same time do not interface with each other.
+		  
+		  IMPL:-
+		  To implement this we will use @Version annotation in entity class.
+		  By using  this each transaction that reads data contains value of the version property.
+		  Before the transaction wants to update, it checks the version property again.
+		  If the value has changed in the meantime, an OptimisticLockException is thrown. Otherwise,
+		  the transaction validates the update and increments a value version property.
+		  
+(2)  (ii)  PESSIMISTIC LOCKING:-	In rare cases Where we will get update collision before commit transaction can be used.
+           When we use the pessimistic locking,database objects are locked during the transaction and lock 
+           conflicts,if they happen are detected earlier.	
+     Ref:- https://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/transactions.html	   

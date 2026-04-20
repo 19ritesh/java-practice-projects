@@ -1,0 +1,39 @@
+** SERIALVERSIONUID:-
+   * In serializtion both sender and receiver should has .class file at the beginning only,just state of object
+     is travelling from sender to receiver.At the time of serializtion with every object sender side jvm will
+	 save a unique identifier.JVM is responible to generate this unique identifier based on .class file.
+	 At the time of D-Serialization receiver side JVM will compare unique identifier associated with the object
+	 with local class unique identifier.If both are matched then only D-Serialization performed otherwise we
+     will get runtime exception saying InvalidClassEx.This unique identifier is nothing but SerialVersionUid.
+	 
+** SERIALIZATION w.r.t INHERITANCE:
+________________________________________________
+* If parent class implement Serilzible then automatcally every child class by default implements Serilzible.
+* That is Serilzible nature is inheriting from parent to child.
+* Even though parent class does not implements Serilzible,We can Serilze child object if child class implements 
+  serializable interface.
+* At the time of Serialization JVM ignores the values of instance variables which are coming from non serializable
+  parent,JVM saves default values for those objects. 
+* At the time of D-Serialization JVM check weather class is non serializable or not.If any parent class is non
+  serializable JVM creates a seperate object for every non serializable parent and share its instance
+  variables to the current object.  
+* For this JVM always calls no arg constructor(default constructor) of that non serializable parent hence
+  every non-serializable parent should compolsory contain no arg constructor otherwise we will get RuntimeEx.
+
+** READRESOLVE() Method:- For Serilzible and Externalizable classes,the resolve method allows a class to 
+     replace/resolve the object read from the stream before it is returned to the caller.
+   * By implementing the readResolve method,a class can dirctly control the types and instances being
+     deserialized.
+	 Method Sign:- public Object readResolve() throws ObjectStreamException
+        
+	 
+	 
+
+
+
+
+
+
+                       				 
+	 
+	 

@@ -1,0 +1,9 @@
+Queue:-                                                    |                               DeQueue:- 
+___________________________________________________________|______________________________________________________________________
+**  Queue is a linear list of elements.                    | ** DeQueue is a linear list of statements.
+		                                                   |          																																  
+**  With a Queue,deletions can take place only one         | ** With a deQueue,added and removed either end but
+    end called front,and insertion can take place only the |    not in the middle.
+    other hand called rear.                                |
+                                                           |
+___________________________________________________________|_________________________________________________________  

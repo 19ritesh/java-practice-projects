@@ -1,0 +1,38 @@
+(1)  TOSTRING() METHOD:-(i)If we will print the reference variable of any object then toString() of object class
+     will be execute and it print the memory address along with  the class name.
+    (ii) Based on our requirement we can override the toString method for print the content of the object.
+     SIGN:-public String toString() {
+                 return getClass().getName() + "@" + Integer.toHexString(hashCode()); }
+				 
+(2)  .EQUALS():-(i)Object class .equals() is meant for reference compression.
+     (ii)We can override .equals() and hashCode() for maintain the contract of hashCode(0 and equals().
+     SIGN:- public boolean equals(Object obj) {
+                return (this == obj); }
+				
+(3)	CLONE():- The process of creating exactly duplicate copy of object is nothimg but cloning.
+    (1)SHALLOW:-The process of creating just duplicate reference variable but not duplicate object is called
+ 	shallow cloning.
+    E.g:-   Test t1=new Test();
+            Test t2=t1;
+    (ii)DEEP:- The process of creating exactly independent duplicate object is called deep cloning.
+               E.g:- Test t1=new Test();
+                     Test t2=(Test)t1.clone();
+                S.o.p(t1==t2);  //false.
+     NOTE:-By default deep cloning.				
+				
+******.EQUALS() METHOD BEST PRACTICE:-******
+
+ (i) Meaning of content compression like whether the names are equal (or) roll numbers (or) both are equal.
+(ii) If we are passing heterogeneous object our .equals() method should return false that is we have to handle
+             ClassCastException to return false. 
+(iii) If we are providing null argument our .equals() method should return false that is we have to 
+           handle NullPointerException to return false.			 
+
+	 
+				 
+			 
+				 
+				 
+                     
+      
+	

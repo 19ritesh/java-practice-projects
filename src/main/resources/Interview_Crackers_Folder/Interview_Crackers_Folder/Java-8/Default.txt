@@ -1,0 +1,55 @@
+**** Default Methods :- **** 
+________________________________________________
+  ** Until 1.7 version onwards inside interface we can take only public abstract methods and public 
+	  static final variables (every method present inside interface is always public and
+           abstract whether we are declaring or not). 
+  ** Every variable declared inside interface is always public static final whether we are declaring or not. 
+  ** But from 1.8 version onwards in addition to these,   we can declare default concrete methods also inside interface,
+     which are also known as defender methods.   
+  **  Interface default methods are by-default available to all implementation classes.
+       Based on requirement implementation class can use these default methods directly or can override	 
+  **  Default methods also known as defender methods or virtual extension methods. 
+  ** The main advantage of default methods is without effecting implementation classes we can
+     add new functionality to the interface (backward compatibility).   
+  ** NOTE:-  We can’t override object class methods as default methods inside interface otherwise we get compile time error. 
+  ** Reason: Object class methods are by-default available to every Java class hence it’s not required to bring through default methods. 
+
+Default method vs multiple inheritance :-
+________________________________________________
+  ** Two interfaces can contain default method with same signature then there may be a chance of
+     ambiguity problem (diamond problem) to the implementation class. To overcome this problem compulsory 
+	   we should override default method in the implementation  class otherwise we get compile time error. 
+
+
+How to override default method in the implementation class? :-
+________________________________________________________________________
+  ** In the implementation class we can provide complete new implementation or we can call any interface  method as follows. 
+      interfacename.super.m1(); 
+
+     class Test implements Left, Right {  
+	 public void m1() {       
+	 System.out.println("Test Class Method");
+	 OR Left.super.m1();    	 } 
+	 public static void main(String[] args) {     
+	 Test t = new Test();                          
+	 t.m1();               }   
+ 
+Differences between interface with default methods and abstract class :-
+__________________________________________________________________________________________________________________________________
+  Interface with Default Methods:-                         |              Abstract Class :- 
+___________________________________________________________|______________________________________________________________________
+ ** Inside interface every variable is Always              |            ** Inside abstract class there may be chance of instance variables
+       public static final and there is  No                |                which are required to the child classes.
+		  chance of instance variables.                    |           
+		                                                   |          																																  ** Abstract class can talk about state of object.
+  ** Interface never talks about state of Object.          |            ** Abstract class can talk about state of object.
+  ** Inside interface we can’t declare Constructors.       |            ** Inside Abstract class we can declare constructors.
+  ** Inside interface we can’t                             |            ** Inside abstract class we can declare Instance and static blocks. 
+     declare Instance and static blocks.                   | 
+  ** Functional interface with default                     |            ** Abstract class can't refer lambda expressions.
+     Methods Can refer lambda expression.                  | 
+  ** Inside interface we can’t                             |            ** Inside abstract class we can override Object class methods.
+     override Object class methods. 	                   |
+____________________________________________________________________________________________________________________________________________
+																			 
+  ** Interface with default method != abstract class

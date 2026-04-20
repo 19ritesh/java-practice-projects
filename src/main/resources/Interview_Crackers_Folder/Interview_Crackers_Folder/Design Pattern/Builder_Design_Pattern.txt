@@ -1,0 +1,68 @@
+** CREATIONAL:- Builder Design Pattern
+__________________________________________
+** Builder design pattern says that:-Construct a complex object from simple object by using step by step 
+   approach.
+** It is mostly used when object can't be created in single step just like Deserializtion of complex object.
+
+** Advantage:
+______________________________
+** It provides clear speration between construction and representation of object.
+** It supports to change the internal representation ob objects.
+
+** Where we need builder Design pattern:
+_____________________________________________
+** Eg:- Suppose We created a class with the name of User and the User class have 5 property with the name of
+        firstName, lastName, age, phone and address.
+	**  If We want to make User class as a immutable class then we will make a constructor as and then we
+	    have to pass all those fields inside constructor.
+	**  If two fields are manadatory and rest of 3 are optional then we need more constructor.
+    **  Now We define a more field with name of salary.
+
+** Coded Solution:-
+______________________________
+** We will make Two class name:- (1) User    (2)UserBuilder
+
+ * USER class:-
+______________________________
+** We will take all the fields and declare with private and final.
+   E.g:-  private final String firstName;(Now go into UserBuilder class.)
+** Then we make a private constructor and passed the UserBuilder instance and we ill initilize all the 
+     fields of UserBuilder inside this constructor.
+** Then We ill take only getters method.	 
+** Then We will override toString().	 
+ 
+ * UserBuilder:-
+______________________________
+** We will take immutable fields with final and non-immutable fields without final.
+   E.g:-  private final String firstName;
+          private String phone;
+** Then we will make a public constructor and passes the immutable manadatory fields inside constructor
+       and initialize with THIS keyboard.
+** Then We will create the methods with non-mandatory field and we wil initilize by using THIS keyboard.
+
+
+** Existing implementation of UserBuilder:-
+____________________________________________________
+** java.lang.StringBuilder#append() [Unsynchronized class]
+** java.lang.StringBuffer#append() [Synchronized class]
+
+** Ref:- https://howtodoinjava.com/design-patterns/creational/builder-pattern-in-java/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+   

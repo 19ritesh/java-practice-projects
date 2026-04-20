@@ -1,0 +1,27 @@
+(1)   TREESET:-(1)The underlying data structure is balanced tree. 
+      (2) Duplicate objects are not allowed.
+	  (3) Insertion order is not preserved and it is based on some sorting order of objects.
+	  (4) Heterogeneous objects are not allowed if we are trying to insert heterogeneous objects then we will get ClassCastException. 
+	  (5) Null insertion is possible(only once). 
+	  
+(2)  NULL ACCEPETANCE:-(1)For the empty TreeSet as the 1st element “null” insertion is possible but 
+     after inserting that null if we are trying to insert any other we will get NullPointerException.
+    (2)For the non empty TreeSet if we are trying to insert null then we will get NullPointerException. 
+
+(3) EXTRA:-(1)If we are depending on default natural sorting order compulsory the objects 
+         should be homogeneous and Comparable otherwise we will get ClassCastException.
+   (2)An object is said to be Comparable if and only if the corresponding class implements Comparable interface. 
+   (3)String class and all wrapper classes implements Comparable interface but StringBuffer class doesn’t 
+      implement Comparable interface hence in the above program we are getting ClassCastException.    
+	  
+TreeMap():-                                                |                               TreeSet():- 
+___________________________________________________________|______________________________________________________________________
+**  Implements map interface      .                        | ** Impl set interface.
+		                                                   |          																																  
+**  Allow duplicate values                                 | ** No 
+** Impl:-Red black tree based Navigable map impl.          | ** Navigable set impl based on a Treemap              
+** Sorting:- Based on keys.                                | **Sorting:-Based on objects.
+___________________________________________________________|________________________________________________________   	                 	  
+	  
+	  
+	  

@@ -1,0 +1,7 @@
+(1) DEFAULT CONSTRUCTOR:-(i)For every class in java including abstract classes also constructor concept applicable.
+    (ii)  If We are not writing at least one constructor then compiler will generate default constructor.
+    (iii) If We are not writing any constructor then compiler will provide constructor. 
+	
+(2) PROTOTYPE OF DEFAULT CONSTRUCTOR:-(i)It is always no argue constructor.
+    (ii) The access modifier of default constructor is same as class modifier.(Only applicable for public and default).	
+	(iii)Default constructor contains one line .super().It is no arguement call to constructor.

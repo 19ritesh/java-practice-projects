@@ -1,0 +1,291 @@
+JAVA 8:-
+__________
+
+** Lambda Expression
+** Functional Interface
+** Default Methods
+** Predicates
+** Functions
+** Double Colon Operator
+** Stream Api
+** Date and Time Api.
+
+**** Lambda Expression:- ****
+_________________________
+** Lambda Expression is just an anonymous (nameless) function. 
+** That means the function which doesn’t have the name, return type and access modifiers. 
+** Lambda Expression also known as anonymous functions or closures. 
+
+    Eg:1- interface Addable{  
+    int add(int a,int b);  
+      }     
+	  
+	  public class Test {
+	public static void main(String[] args) {
+	
+	 //// Lambda Expression without return keyboard.
+		 Addable ad1=(a,b)->(a+b);
+		 System.out.println(ad1.add(10, 20));
+		 
+    //// Lambda Expression with return keyboard.
+	     // Lambda expression with return keyword.    
+        Addable ad2=(int a,int b)->{  
+                            return (a+b);   
+                            };  
+        System.out.println(ad2.add(100,200)); 
+	}
+   }     O/P - 30,300
+   
+   Eg:- 2
+   public void add(int a,int b);
+    (a,b) -> (a+b);  = We can write above lambda expression like this.
+	
+** Eg - 3 (From Javatpoint):-
+   public class LambdaExpressionExample7{  
+    public static void main(String[] args) {  
+          
+        List<String> list=new ArrayList<String>();  
+        list.add("ankit");  
+        list.add("mayank");  
+        list.add("irfan");  
+        list.add("jai");  
+          
+        list.forEach(  
+            (n)->System.out.println(n)  
+        );  
+    }  
+  }  	  O/P - ankit mayank irfan jai
+ 
+ ** Conclusions: -
+ _________________________
+ ** 1)A lambda expression can have zero or more number of parameters (arguments). 
+ ** 2)Usually we can specify type of parameter. If the compiler expects the type based on 
+      the context then we can remove type. i.e., programmer is not required. 	
+ ** 3)If multiple parameters present then these parameters should be separated with comma (,). 	 
+ ** 4) Once we write lambda expression we can call that expression just like a method, for this functional interfaces are required 
+ 
+ 
+**** Functional Interface:- ****
+ ____________________________
+ ** If an interface contain only one abstract method, such type of interfaces are called functional
+       interfaces and the method is called functional method or single abstract method (SAM). 
+ **  Ex: 
+ **  1) Runnable - It contains only run() method
+     2) Comparable - It contains only compareTo() method  
+	 3) ActionListener - It contains only actionPerformed() 
+	 4) Callable - It contains only call() method 	
+ ** Inside functional interface in addition to single Abstract method (SAM) we write any number of default and static methods.
+ ** In Java 8, Sun Micro System introduced @Functional Interface annotation to specify that the interface is Functional Interface. 
+ ** Inside Functional Interface we can take only one abstract method, 
+    if we take more than one abstract method then compiler raise an error message that is called we will get compilation error.  
+ ** Inside Functional Interface we have to take exactly only one abstract method.If we are not declaring 
+     that abstract method then compiler gives an error message.
+ 
+ **Functional Interface with respect to Inheritance:-
+______________________________________________________  
+ ** If an interface extends Functional Interface and child interface doesn’t contain any abstract method 
+     then child interface is also Functional Interface.
+ ** In the child interface we can define exactly same parent interface abstract method. 
+ ** In the child interface we can’t define any new abstract methods otherwise child interface won’t be Functional Interface
+     and if we are trying to use @Functional Interface annotation then compiler gives an error message. 
+ 
+ ** Functional Interface Vs Lambda Expressions:-
+________________________________________________ 
+ ** Once we write Lambda expressions to invoke it’s functionality, then Functional Interface is required. 
+    We can use Functional Interface reference to refer Lambda Expression.  Where ever Functional Interface concept
+	is applicable there we can use Lambda Expressions.
+ 
+
+ ** Anonymous inner classes vs Lambda Expressions:-
+______________________________________________________
+ ** Wherever we are using anonymous inner classes there may be a chance of using Lambda expression
+    to reduce length of the code and to resolve complexity.
+ 
+ ** What are the advantages of Lambda expression:-
+ ______________________________________________________
+ ** We can reduce length of the code so that readability of the code will be improved.
+ ** We can resolve complexity of anonymous inner classes. 
+ ** We can provide Lambda expression in the place of object. 
+ ** We can pass lambda expression as argument to methods.
+  
+ ********NOTE********
+_________________________
+ **  Anonymous inner class can extend concrete class, can extend abstract class, can implement interface with any number of methods but
+ **  Lambda expression can implement an interface with only single abstract method (Functional Interface).
+ **  Hence if anonymous inner class implements Functional Interface in that particular case only we can replace with lambda expressions. 
+          Hence wherever anonymous inner class concept is there, it may not possible to replace with Lambda expressions.
+ **  Anonymous inner class! = Lambda Expression 
+ **  Inside anonymous inner class we can declare instance variables.
+ **  Inside anonymous inner class “this” always refers current inner class object(anonymous inner class) but not related  outer class object  
+ 
+ **  Eg:-  ** Inside lambda expression we can’t declare instance variables. 
+           ** Whatever the variables declare inside lambda expression are simply acts as local variables 
+		   ** Within lambda expression ‘this” keyword represents current outer class object reference 
+		                 (that is current enclosing class reference in which we declare lambda expression)
+           ** From lambda expression we can access enclosing class variables and enclosing method variables directly. 	
+           ** The local variables referenced from lambda expression are implicitly final and
+         		   hence we can’t perform re-assignment for those  local variables otherwise we get compile time error.
+				   
+    
+****Differences between anonymous inner classes and Lambda expression:-****	
+_________________________________________________________________________________________________________________________________________________________
+Anonymous Inner class:-                                               |                     Lambda Expression:-
+_______________________                                               |               _________________________________
+                                                                      |
+  ** It’s a class without name                                        |  ** It’s a method without name (anonymous function). 
+  ** Anonymous inner class can extend Abstract and concrete classes   |  ** lambda expression can’t extend Abstract and concrete classes.
+  ** Anonymous inner class can implement  An interface                |  ** lambda expression can implement an Interface which contains 
+      that contains any number of Abstract methods                    |      single abstract method (Functional Interface) 
+	                                                                  |
+	                                                                  |  
+  ** Inside anonymous inner class we can Declare instance variables.  |  ** Inside lambda expression we can’t Declare instance  variables,  
+                                                                      |     whatever the variables declared are simply  acts as local variables.
+  ** Anonymous inner classes can be Instantiated                      |  ** lambda expressions can’t be instantiated 
+  ** Inside anonymous inner class “this” Always refers current        |  ** Inside anonymous inner class “this” Always refers current
+      anonymous Inner class object but not outer class Object.        |       outer  class object. That is enclosing class object.
+	                                                                  |
+  ** Anonymous inner class is the best choice If                      |  ** Lambda expression is best choice if we want to handle interface
+      we want to handle multiple methods.                             |      with single abstract method(Functional Interface).
+                                                                      |
+	                                                                  |  
+  ** In the case of anonymous inner class At the time of              |  ** At the time of compilation no dot class file will be generated
+     compilation a separate Dot class file will be                    |      for lambda expression.It simply converts in to private method
+	 generated (outerclass$1.class)                                   |       outer class.
+	                                                                  |
+  ** Memory allocated on demand Whenever we are creating an object    |  ** Reside in parmanent memory of jvm(method area).
+                                                                      |
+_________________________________________________________________________________________________________________________________________________
+ 
+**** Default Methods :- **** 
+________________________________________________
+  ** Until 1.7 version onwards inside interface we can take only public abstract methods and public 
+	  static final variables (every method present inside interface is always public and
+           abstract whether we are declaring or not). 
+  ** Every variable declared inside interface is always public static final whether we are declaring or not. 
+  ** But from 1.8 version onwards in addition to these,   we can declare default concrete methods also inside interface,
+     which are also known as defender methods.   
+  **  Interface default methods are by-default available to all implementation classes.
+       Based on requirement implementation class can use these default methods directly or can override	 
+  **  Default methods also known as defender methods or virtual extension methods. 
+  ** The main advantage of default methods is without effecting implementation classes we can
+     add new functionality to the interface (backward compatibility).   
+  ** NOTE:-  We can’t override object class methods as default methods inside interface otherwise we get compile time error. 
+  ** Reason: Object class methods are by-default available to every Java class hence it’s not required to bring through default methods. 
+
+Default method vs multiple inheritance :-
+________________________________________________
+  ** Two interfaces can contain default method with same signature then there may be a chance of
+     ambiguity problem (diamond problem) to the implementation class. To overcome this problem compulsory 
+	   we should override default method in the implementation  class otherwise we get compile time error. 
+
+
+How to override default method in the implementation class? :-
+________________________________________________________________________
+  ** In the implementation class we can provide complete new implementation or we can call any interface  method as follows. 
+      interfacename.super.m1(); 
+
+     class Test implements Left, Right {  
+	 public void m1() {       
+	 System.out.println("Test Class Method");
+	 OR Left.super.m1();    	 } 
+	 public static void main(String[] args) {     
+	 Test t = new Test();                          
+	 t.m1();               }   
+ 
+Differences between interface with default methods and abstract class :-
+__________________________________________________________________________________________________________________________________
+  Interface with Default Methods:-                         |              Abstract Class :- 
+___________________________________________________________|______________________________________________________________________
+ ** Inside interface every variable is Always              |            ** Inside abstract class there may be chance of instance variables
+       public static final and there is  No                |                which are required to the child classes.
+		  chance of instance variables.                    |           
+		                                                   |          																																  ** Abstract class can talk about state of object.
+  ** Interface never talks about state of Object.          |            ** Abstract class can talk about state of object.
+  ** Inside interface we can’t declare Constructors.       |            ** Inside Abstract class we can declare constructors.
+  ** Inside interface we can’t                             |            ** Inside abstract class we can declare Instance and static blocks. 
+     declare Instance and static blocks.                   | 
+  ** Functional interface with default                     |            ** Abstract class can't refer lambda expressions.
+     Methods Can refer lambda expression.                  | 
+  ** Inside interface we can’t                             |            ** Inside abstract class we can override Object class methods.
+     override Object class methods. 	                   |
+____________________________________________________________________________________________________________________________________________
+																					 
+  ** Interface with default method != abstract class 
+  
+Static methods inside interface: -
+________________________________________________
+  ** From 1.8 version onwards in addition to default methods we can write  static methods also inside 
+     interface to define utility functions. 
+  ** Interface static methods by-default not available to the implementation classes hence by using 
+     implementation class reference we can’t call interface static methods.
+  ** We should call interface static methods by using interface name. 
+  ** As interface static methods by default not available to the implementation class,  overriding concept is not applicable. 
+  ** Based on our requirement we can define exactly same method in the implementation class, it’s valid but not overriding. 
+  ** From 1.8 version onwards we can write main() method inside interface and hence  we can run interface directly from the command prompt.
+
+****Predicates****
+_________________________________
+  ** A predicate is a function with a single argument and returns boolean value.
+  ** To implement predicate functions in Java, Oracle people introduced Predicate  interface in 1.8 version (i.e.,Predicate<T>).
+  ** Predicate interface present in Java.util.function package.
+  ** It’s a functional interface and it contains only one method i.e., test().
+  ** As predicate is a functional interface and hence it can refers lambda expression.
+  ** It’s possible to join predicates into a single predicate by using the following methods:-
+      and()
+      or()
+      negate()	  
+           these are exactly same as logical AND ,OR complement operators.	
+
+****Functions****	
+________________________	   
+  ** Functions are exactly same as predicates except that functions can return any type of result but function should (can) 
+      return only one value and that value can be any type as per our requirement. 
+  **  To implement functions oracle people introduced Function interface in 1.8version. 
+  ** Function interface present in Java.util.function package. 
+  ** Functional interface contains only one method i.e., apply()   
+  
+  Differences between predicate  and function  :-
+_____________________________________________________________________________________________________________________________________________
+                 Predicate :-                              |              Function :- 
+___________________________________________________________|_________________________________________________________________________________
+ ** To implement conditional checks                        |            ** To perform certain operation And to return some  
+      We should go for predicate                           |                result we Should go for function. 
+		                                                   |          																																  ** Abstract class can talk about state of object.
+  ** Predicate can take one type Parameter which           |             ** Function can take 2 type Parameters.First one represent 
+     represents Input argument type. Predicate<T>          |                 Input argument type and Second one represent return Type.  Function<T,R>                                                   
+  ** Predicate interface defines only                      |             ** Function interface defines only one method called apply().
+      one method called test()                             |
+  ** public boolean test(T t)                              |             ** public  R  apply(T t) 
+                                                           |
+  ** Predicate can return only boolean value.              |             ** Function can return any type of value 
+                                                           |
+___________________________________________________________|______________________________________________________________________________
+  ** Note: Predicate is a boolean valued function and(), or(), negate() are default methods present inside Predicate interface. 																					 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+						 

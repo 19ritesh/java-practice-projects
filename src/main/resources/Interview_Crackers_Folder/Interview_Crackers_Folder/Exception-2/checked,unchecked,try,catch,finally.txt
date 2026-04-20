@@ -1,0 +1,38 @@
+** CHECKED :-The exceptions which are checked by the compiler for smooth execution of the program 
+   at runtime are called checked exceptions.(E.g:-FileNotFoundException ).
+   
+ * UNCHECKED:-The exceptions which are not checked by the compiler are called unchecked exceptions. 
+               E.g:-ArithmeticException, NullPointerException.
+			   
+   NOTE:-RuntimeException and its child classes, Error and its child classes are unchecked 
+         and all the remaining are considered as checked exceptions.
+		 
+   NOTE:- Whether exception is checked or unchecked compulsory it should occur at runtime only there is
+              no chance of occurring any exception at compile time.
+
+** TRY:- We can incorporate any no of exceptions in try block.But all exception inside try block only.
+ * Whatever variable we will declare inside try that is used inside try block only.(local to try).
+ * If we will not incorporate any exceptions inside try then try block will be not execute.
+ * If we will declare any global variable that can be used by try and catch both.
+ * One try can have any no of catch.
+ * We can't keep any statement between try and catch block.
+
+** CATCH:- If any exception is rised befor try then catch is not responsible to handle that exception.
+ * If any error occur inside try that can be handle by another try and catch block.
+ * If any exception raised inside try and that can be not handle by catch,then flow will be terminate.
+ * Two catch shouldn't the same arguement.
+ * Between two catch we can't keep any statement.
+
+** FINALLY:- If once ctrl will enter inside try block then anyhow finally block will be execute.
+ * We will keep any no finally block after all catches.
+ * We can't keep any statement between try and catch block.  
+
+** DIFFERENCE **
+__________________
+(1) CHECKED:-(i)Compiler have info about checked exception
+    (ii) Compiler will force us to keep try,catch or throws ehenever it is required.
+	(iii)If try and catch not required and programmer keep try and catch,then its compile time error.
+	
+(2) UNCHECKED:- Compiler doesn't have any  information about unchecked exception.
+    (ii) Compiler will not force to us keep try and catch block in the program.
+    (iii)Unchecked exception is error type or run type.

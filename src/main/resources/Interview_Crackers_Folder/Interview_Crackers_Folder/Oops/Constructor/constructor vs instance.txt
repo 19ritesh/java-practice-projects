@@ -1,0 +1,12 @@
+(1) CONSTRUCTORS:-Whenever we are creating an object some piece of the code will be executed automatically 
+                  to perform initialization of an object this piece of the code is nothing but constructor.
+  * Hence the main objective of constructor is to perform initialization of an object. 
+
+
+  ** CONSTRUCTORS VS INSTANCE BLOCK:  
+   * Both instance block and constructor will be executed automatically for every object creation but instance block 1st followed by constructor. 
+   * The main objective of constructor is to perform initialization of an object. 
+   * Other than initialization if we want to perform any activity for every object creation we have to define that activity inside instance block. 
+   * Both concepts having different purposes hence replacing one concept with another concept is not possible.
+   * Constructor can take arguments but instance block can’t take any arguments hence we can’t replace constructor concept with instance block. 
+   * Similarly we can’t replace instance block purpose with constructor

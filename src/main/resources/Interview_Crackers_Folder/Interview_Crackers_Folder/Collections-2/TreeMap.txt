@@ -1,0 +1,22 @@
+** HashMap:-
+____________
+**  Java HashMap is a hashtable based implementation of Map interface.
+**  HashMap implements Map, Cloneable, and Serializable interface.
+**  HashMap allows a single null key and multiple null values.
+**  HashMap allows heterogeneous elements because it does not perform sorting on keys.
+**  HashMap is faster than TreeMap because it provides constant-time performance that is O(1) for the 
+     basic operations like get() and put().
+**  HashMap does not maintain any order.
+**  The HashMap should be used when we do not require key-value pair in sorted order.	 
+	 
+** TreeMap:-
+__________________
+**  Java TreeMap is a Tree structure-based implementation of Map interface.
+**  TreeMap implements NavigableMap, Cloneable, and Serializable interface.
+**  TreeMap does not allow null keys but can have multiple null values.
+**  TreeMap allows homogeneous values as a key because of sorting.
+**  TreeMap is slow in comparison to HashMap because it provides the performance of O(log(n)) for 
+     most operations like add(), remove() and contains().
+**  The elements are sorted in natural order (ascending).
+**  The TreeMap should be used when we require key-value pair in sorted (ascending) order.
+	 

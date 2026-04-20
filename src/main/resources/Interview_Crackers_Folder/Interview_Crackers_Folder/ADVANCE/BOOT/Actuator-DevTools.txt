@@ -1,0 +1,13 @@
+****Spring Boot Actuator****
+_________________________________________
+**  Spring boot actuator is used to includes a number of additional features that is help us to monitor and
+    manage the spring boot application.
+	
+	OR 
+ * It expose operational information about the running application info,env etc.
+ * It uses HTTP endpoints or JMX beans to enable us to interact with it.
+ 
+**Spring Boot DevTools**
+_________________________________________
+** The main purpose of Spring boot is pick up the changes and restart the application.
+

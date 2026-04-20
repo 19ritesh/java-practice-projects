@@ -1,0 +1,6 @@
+** Rest API method and URL:-
+    ** GET:-(Read Only):-        http://localhost:8080/UserManagement/rest/UserService/users
+    ** POST:-(Create Only):-     http://localhost:8080/UserManagement/rest/UserService/users
+    ** PUT:-(Update/Replace):-   http://localhost:8080/UserManagement/rest/UserService/users/2
+    ** DELETE:-(Delete):-	     http://localhost:8080/UserManagement/rest/UserService/users
+	** PATCH:-(Update/Modify):-  It is used for updation or modification.

@@ -1,0 +1,54 @@
+**** Lambda Expression:- ****
+_________________________
+** Lambda Expression is just an anonymous (nameless) function. 
+** That means the function which doesn’t have the name, return type and access modifiers. 
+** Lambda Expression also known as anonymous functions or closures. 
+
+    Eg:1- interface Addable{  
+    int add(int a,int b);  
+      }     
+	  
+	  public class Test {
+	public static void main(String[] args) {
+	
+	 //// Lambda Expression without return keyboard.
+		 Addable ad1=(a,b)->(a+b);
+		 System.out.println(ad1.add(10, 20));
+		 
+    //// Lambda Expression with return keyboard.
+	     // Lambda expression with return keyword.    
+        Addable ad2=(int a,int b)->{  
+                            return (a+b);   
+                            };  
+        System.out.println(ad2.add(100,200)); 
+	}
+   }     O/P - 30,300
+   
+   Eg:- 2
+   public void add(int a,int b);
+    (a,b) -> (a+b);  = We can write above lambda expression like this.
+	
+** Eg - 3 (From Javatpoint):-
+   public class LambdaExpressionExample7{  
+    public static void main(String[] args) {  
+          
+        List<String> list=new ArrayList<String>();  
+        list.add("ankit");  
+        list.add("mayank");  
+        list.add("irfan");  
+        list.add("jai");  
+          
+        list.forEach(  
+            (n)->System.out.println(n)  
+        );  
+    }  
+  }  	  O/P - ankit mayank irfan jai
+ 
+ ** Conclusions: -
+ _________________________
+ ** 1)A lambda expression can have zero or more number of parameters (arguments). 
+ ** 2)Usually we can specify type of parameter. If the compiler expects the type based on 
+      the context then we can remove type. i.e., programmer is not required. 	
+ ** 3)If multiple parameters present then these parameters should be separated with comma (,). 	 
+ ** 4) Once we write lambda expression we can call that expression just like a method, for this functional interfaces are required 
+ 

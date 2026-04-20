@@ -1,0 +1,29 @@
+** VOLATILE:- Volatile is a modifier only applicable for variables but not for classes and methods.
+    * If the value  of variables keep on changing then we have to declare that variables as volatile.
+    * If the variables is a volatile then for every thread a local copy will be created and for all intermediate 
+      modification will be take place in copy of threads but not in master thread.(Duplicate created by the jvm.).
+    * Once values will be finalized before terminating the thread that final values will be update master copy.
+
+** Advantage:- The main advantage of volatile keyboard is it will resolve the data consistency problem.
+** Disadvantage:-It will increase the complexity of the program.	
+                 Highly recommended that don't use if there is no specific requirement.
+				 
+** Volatile vs final:- Volatile means the values keep on changing where as final means the value never changes.
+                       Hence final and volatile combination is illegal for variables.
+_________________________________________________________________________________________________________________					   
+** TRANSIENT:-
+___________________________________________________________________________________________________________________________					   
+** TRANSIENT:- It is keyboard only applicable for variable but not for methods and classes.
+   * At the time of Serialization if we don't want to save the value of a particular variable
+     then we should decalare that variable with the transient keyboard.
+   * So at the time of Serialization J.V.M will ignore original value and save default value to the file.
+   * Hence Transient means NOT TO SERILIZE.
+   
+** Transient vs static:- Static variable is not part of the object state and hence it won't participate in
+   Serialization.So,Declaring static variables as Transient there is no use.
+
+** Transient vs final:- Final variables will be participated in Serialization directly by the value.
+   * Hence,declaring a final variables as a transient,there is no impact.			 
+				 
+	
+   

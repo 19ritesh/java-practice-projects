@@ -1,0 +1,10 @@
+** TIME-COMPLEXITY:-
+   
+1. 2. O(1) - Constant time
+3. O(n) - Linear time
+4. O(n^2) - Quadratic time
+5. Bubble sort
+6. O(n^c) - Polynomial time
+7. O(log n) - Logarithmic time
+8. O(n log n) - Linearithmic
+9. O(2^n) - Exponential time

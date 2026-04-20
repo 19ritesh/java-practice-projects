@@ -1,0 +1,3 @@
+** Use of private constructor??
+   *  By providing a private constructor we prevent class instances in other class.
+   *  We can also prevent a class extended by other class.

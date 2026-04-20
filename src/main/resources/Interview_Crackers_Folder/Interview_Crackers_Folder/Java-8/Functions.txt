@@ -1,0 +1,27 @@
+****Functions****	
+________________________	   
+  ** Functions are exactly same as predicates except that functions can return any type of result but function should (can) 
+      return only one value and that value can be any type as per our requirement. 
+  **  To implement functions oracle people introduced Function interface in 1.8version. 
+  ** Function interface present in Java.util.function package. 
+  ** Functional interface contains only one method i.e., apply()   
+  
+  Differences between predicate  and function  :-
+_____________________________________________________________________________________________________________________________________________
+                 Predicate :-                              |              Function :- 
+___________________________________________________________|_________________________________________________________________________________
+ ** To implement conditional checks                        |            ** To perform certain operation And to return some  
+      We should go for predicate                           |                result we Should go for function. 
+		                                                   |          																																  ** Abstract class can talk about state of object.
+  ** Predicate can take one type Parameter which           |             ** Function can take 2 type Parameters.First one represent 
+     represents Input argument type. Predicate<T>          |                 Input argument type and Second one represent return Type.  Function<T,R>                                                   
+  ** Predicate interface defines only                      |             ** Function interface defines only one method called apply().
+      one method called test()                             |
+  ** public boolean test(T t)                              |             ** public  R  apply(T t) 
+                                                           |
+  ** Predicate can return only boolean value.              |             ** Function can return any type of value 
+                                                           |
+___________________________________________________________|______________________________________________________________________________
+  ** Note: Predicate is a boolean valued function and(), or(), negate() are default methods present inside Predicate interface. 																					 
+
+

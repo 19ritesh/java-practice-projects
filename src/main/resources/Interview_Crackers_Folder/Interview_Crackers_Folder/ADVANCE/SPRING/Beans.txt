@@ -1,0 +1,3 @@
+(1) SPRING-BEAN:-(1)A spring bean is a simple java object.
+    (ii) Whenever java objects created by spring container,then spring refers to them as "spring-beans".
+	(iii)Spring beans are created from normal java classes ....just like java objects. 

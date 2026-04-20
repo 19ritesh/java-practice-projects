@@ -1,0 +1,24 @@
+(1) Method area:-For every J.V.M one method area will be available.Method area will created at the time of JVM startup.
+ *  Contains:- It contains class level binary data,satic variables,Constants pool of class.
+ *  Method area can be access by multiple thread simultanesouly.
+ 
+(2) Heap area:-For every J.V.M one heap area will be available.Heap area will created at the time of JVM startup.
+ * Contains:- It contains objects and corresponding instance variables.
+ * Heap area can be access by multiple thread simultanesouly.So,it is not thread safe.
+ * A java application can communicate with JVM by using Runtime object.Runtime class present in java.lang
+   package and its a singleton class.(We can call  freeMemory(),totalMemory(0 by using Runtime object).
+ * Heap memory is finite memory but based on our requirement we can set maximum and minimum heap size that
+   we can increase or decrease.
+
+(3) PC Register(Program Counter Register):-For every thread a seperate PC Registers will be created at
+   the time of Thread creation.
+ * Contains:- Address of current executing instruction.
+   Once instruction execution complete,automatically P.C. register will be incremented to hold address of
+   next instruction.
+   
+(4) Native method stacks:-For every thread J.V.M will create a seperate native method stack.
+ * All native method calls invoked by the thread will be stored in corresponding native method stack.
+
+  NOTE:-Method area and Heap area per JVM whereas stack area,P.C. Registers and native method stack are 
+        per thread.  
+      

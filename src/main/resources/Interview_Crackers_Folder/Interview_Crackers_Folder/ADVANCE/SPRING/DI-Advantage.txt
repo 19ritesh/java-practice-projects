@@ -1,0 +1,18 @@
+** DI-Advantage of Dependency injection:-
+______________________________________________
+** DI allows a client flexibility being configurable.Only clients behaviour fixed.
+** Loosely couple architecture.
+** Testing can be performed using Mock objects.  
+
+** DI-Advantage of high cohesion Dependency injection:-
+_________________________________________________________
+** Reduced module complexity.
+** Increased module reusability.
+** Increased system maintaibility because logic changein the domain effect modules.
+** DI allows concurrent or independent development.	
+
+** Disadvantages:-
+________________________	
+** DI creates clients that demand configure details supplied by costruction injection code.
+** Tight Coupling.
+** DI cause an explosion of types,especially in languages that have explicit interface.	

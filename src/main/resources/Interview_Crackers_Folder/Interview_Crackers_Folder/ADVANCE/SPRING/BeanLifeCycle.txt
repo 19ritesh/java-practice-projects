@@ -1,0 +1,7 @@
+**
+
+  Container Started----->Bean Instantinted----->Dependencies injected----->Internal spring processing----->
+  Our custom InIt method----->Our Custom Destroy method----->Stop.
+  
+  ** Our custom InIt method:-Bean is ready for use.
+                             Container is shutdown.

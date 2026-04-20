@@ -1,0 +1,25 @@
+(1)TABLE PER CLASS MAPPING:-
+   @Entity  
+@Table(name = "employee101")  
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)  
+@DiscriminatorColumn(name="type",discriminatorType=DiscriminatorType.STRING)  
+@DiscriminatorValue(value="employee")  
+  
+public class Employee {  
+@Id  
+@GeneratedValue(strategy=GenerationType.AUTO)  
+@Column(name = "id")  
+ //private int id;  
+@Column(name = "name")  
+private String name;   
+} 
+(2)CHILd CLASS:-
+
+@Entity  
+@DiscriminatorValue("regularemployee")  
+public class Regular_Employee extends Employee{  
+      
+
+  
+//setters and getters  
+}   

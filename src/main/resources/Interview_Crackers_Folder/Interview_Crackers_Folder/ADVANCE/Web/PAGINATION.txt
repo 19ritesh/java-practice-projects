@@ -1,0 +1,29 @@
+** PAGINATION:- If we are fetching the huge rcords from db and we want to perform paging operation then we will
+                 use the pagination.
+				 
+(1)   IMPLEMENTATION:-(i) We will implements the PAGINATIONANDSORTINGREPOSITORY class of spring
+   E.g:-(DAO Layer):-  public interface StudentRepo extends CrudRepository, PaginationAndSortingRepository  
+              {   
+			  page<Student> findAll(Pageable pageable)
+		}
+(2)	  SERVICE layer:-
+      public page<Student> findAllByPage(Pageable pageable)
+	  {
+	    return studentRepo.findAll(pageable);
+}
+	
+(3)   CONTROLLER layer:-
+
+      @RequestMapping(value="/test",method=RequestMethod.GET)
+	  @ResponseStatus(HttpStatus.NO_CONTENT)
+      public page<Student> fetchByPage(Pageable page)
+      {
+	  return this.studentService.findAllByPage(page);
+        }	 
+		
+RUN:- localhost:8080/example/students/test/test?page=0&size=1		
+      page=0&size=1 - We can create the object of pageable and We can pass here.
+	  
+PAGEABLE:- Pageable is an interface which contains requested page information. 		
+			  
+			  

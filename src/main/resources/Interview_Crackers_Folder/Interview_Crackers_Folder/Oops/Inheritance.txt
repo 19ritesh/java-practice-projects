@@ -1,0 +1,35 @@
+(1)  IS-A-RELATIONSHIP(INHERITANCE):-By using extends keywords we can implement IS-A relationship.
+
+ *   ADVANTAGE:- code reusability. 
+ 
+(2)  HAS-A-RELATIONSHIP:-HAS-A relationship is also known as composition(or)aggregation.(Used for code reusability).
+    
+ *   There is no specific keyword to implement hAS-A relationship but mostly we can use new operator. 
+ *   Class Car HAS-A engine reference.(Engine e=new Engine();)
+ 
+(3)  COMPOSITION:Without existing container object if there is no chance of existing contained objects
+     then the relationship between container object and contained object is called composition which
+  	 is a strong association.   
+
+(4)COMPOSITION:- public class Car {
+    //final will make sure engine is initialized
+    private final Engine engine;     
+    public Car(){
+       engine  = new Engine();
+   }
+   }
+class Engine {
+    private String type;
+} 
+
+NOTE:-Engine is-part-of Car, the relationship between them is Composition.
+
+(5) AGGREGATION:-public class Organization {
+    private List employees;
+}
+
+public class Person {
+    private String name;   
+}
+NOTE:-Since Organization has Person as employees, the relationship between them is Aggregation.
+	 

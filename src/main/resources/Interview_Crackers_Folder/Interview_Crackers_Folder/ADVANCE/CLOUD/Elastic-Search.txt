@@ -1,0 +1,19 @@
+**Elasticsearch**
+______________________
+** What:- It is core, We can think of Elasticsearch as a server that can process JSON requests and give
+   you back JSON data.
+   
+** How Works:- Documents are the basic unit of information that can be indexed in Elasticsearch expressed in JSON,
+   which is the global internet data interchange format. 
+ * In Elasticsearch, a document can be more than just text, it can be any structured data encoded in JSON.
+ * That data can be things like numbers, strings, and dates. 
+ * Each document has a unique ID and a given data type,which describes what kind of entity the document is.
+   For example, a document can represent an encyclopedia article or log entries from a web server.  
+	
+** Elastic Stack (ELK)  **
+_________________________________
+** Elasticsearch is the central component of the Elastic Stack,a set of open-source tools for data ingestion,
+   storage, analysis, and visualization. 	
+ * It is commonly referred to as the “ELK” stack after its components Elasticsearch, and Kibana.
+ * Although a search engine at its core, users started using Elasticsearch for log data and wanted a way to easily
+   ingest and visualize that data.

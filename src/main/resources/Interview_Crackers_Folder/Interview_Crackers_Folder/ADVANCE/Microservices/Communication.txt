@@ -1,0 +1,23 @@
+** MICROSERVICE COMMUNICATION:- Two web services can communicate by each other by using Rest Template.
+      E.g:-
+	    Class
+		{
+		public String  getCoupn() throws RestClientException
+		String baseUrl="http://localhost:8080/coupn/all";
+		
+		RestTemplate restTemplate=new RestTemplate();
+		 ResponseEntity<String> respone=null;
+		 try
+		{
+		respone=restTemplate.exchange(baseUrl,HttpMethod.GET,getHeaders(),String.class);
+		}
+		catch(Exception ex)
+		{
+		System.out.println(ex);
+		}
+		}
+		
+   PROPERTIES FILE:-	
+
+    server.port=8081
+    spring.application.name=CouponApplication	

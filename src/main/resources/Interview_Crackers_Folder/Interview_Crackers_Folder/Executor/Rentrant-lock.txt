@@ -1,0 +1,15 @@
+** REENTRANT LOCK(Class):-
+______________________________
+
+ * It is the child implementation class of lock interface.
+
+  * Reentrant means a thread can acquire same lock multiple times without any issue.
+  * Internally,Reentrant lock increments threads personal count whenever we call lock method and decrements count value.
+  * Whenever Threads call unlock method and lock will be released whenever count reaches zero.
+  
+  
+** LOCK:-
+______________________________
+ 
+ * Lock object is similar to implicit lock acquired by a Thread to execute synchronized method or block.
+ * Lock implementations provide more extensive operations than traditional implicit locks. 

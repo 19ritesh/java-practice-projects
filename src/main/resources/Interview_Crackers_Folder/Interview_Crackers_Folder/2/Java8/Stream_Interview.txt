@@ -1,0 +1,11 @@
+** Youtube Stream api:
+____________________________
+** Sequence of elements is called Stream.
+** Two mehods added in the collection interface is :- Stream and parallel Stream.
+** If we want to perform concurrency based or thread based operation then we should always go for parallel stream.
+** And if we ant to perform normal opeartion then we should always go for Stream.
+** There are two types of operation we can perform by using Stream api:- Intermediate and Terminal operation.
+** In Stream api there may be chances of zero or one or more than one interediate operation will be available.
+** In Stream api, atleast one terminal operation must be possible.
+** (Intermediate:-mapping(),filtering(),sorted()),(Terminal:-collect(),forEach,toArray().stream.of()).
+** 	

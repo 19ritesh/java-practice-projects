@@ -1,0 +1,8 @@
+(1)  INTERMEDIATE OPERATIONS:- Mapping(),filtering(),sorted().
+
+(2)  TERMINAL OPERATIONS:- collect(),forEach(),toArray(),stream.of()
+
+     Stream.of()method :- We can also apply a stream for group of values and for arrays. 
+	 
+	 NOTE:-(1)In Stream,can have zero or one,or more than one intermediate operations will be available.
+	 (2) Butin Stream api,atleast one terminal operations can be must possible.

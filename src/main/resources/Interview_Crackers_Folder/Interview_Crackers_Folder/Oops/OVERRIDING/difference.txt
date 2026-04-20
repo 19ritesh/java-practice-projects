@@ -1,0 +1,17 @@
+** DIFFERENCE:-
+
+   OVERLOADING:-
+  (1) Method name should be same but arguments should be different.
+  (2) Method resolution take care by the compiler based on reference.
+  (3) It's known as compile time polymorphism,static polymorphism or early binding.
+  (4) Method overloading we will perform in the same class.
+  (5) No resticions in case of Exception.
+  (6) No resticions in case of access modifier.
+
+   OVERRIDING:-
+  (1) Method name should be same and arguments should be also same.  
+  (2) Method resolution take care by the JVM based on Runtime object.
+  (3) It's known as Runtime time polymorphism,dynamic polymorphism or late binding.
+  (4) Method overriding we will perform in the child class class.
+  (5) If child class throws any checked exception,Parent class method should throw the same or Ex or its checked ex.
+  (6) The scope of acces modifier we can increase but we can't decrease.

@@ -1,0 +1,15 @@
+(1) BEAN FACTORY:-(i)Bean factory is an interface which has one concreate sub class called XmlBeanFactory.
+    (ii)  Beans configured with bean factory container will be loaded lazly by default.
+	(iii) Baen Factory doesn't support annotations.
+	(iv)  Bean Factory does not support event publishing.
+	(v)   Bean factory container does not provide the way to resolve message bundles.
+	
+	
+(2) APPLICATION CONTEXT:-(i)Application context is an interface which has 3 concrete subclass:-
+                                 (i)  ClassPathXmlApplicationContext.
+                                 (ii) FileSystemXmlApplicationContext
+                                 (iii)XmlWebApplicationContext
+   (ii)  Beans configured with application context container will be loaded aggresively by default.
+   (iii) Application container supports annotations.
+   (iv)  Application context does support event publishing.
+   (v)   Application Context container does provide the way to resolve message bundles.

@@ -1,0 +1,82 @@
+Spring Boot MicroServices and Spring Cloud:
+____________________________________________
+
+1. Eureka Discovery.
+2. UserS MicroServices.
+3. Account Management.
+4. Zuul Api Gateway.
+5. Zuul as a load balancer.
+
+1. Eureka Discovery:
+____________________________________________
+** Add the dependency of Eureka Server and Eureka Client.
+** Use annotation @EnableEurekaServer in main class
+** Give the following entries in properties file:-
+      server.port=8010
+      spring.application.name=discoveryservice
+      eureka.client.registerWithEureka=false
+      eureka.client.fetchRegistry=false
+      eureka.client.serviceUrl.defaultZone=http://localhost:8010/eureka
+	  
+** 	Run the application and hit the following URL in browser :- http://localhost:8010
+
+2. Users MicroServices:-
+____________________________________________
+** Add the dependency of Eureka Client, Web and Dev tools.
+** Use annotation @EnableDiscoveryClient in main class.
+** Give the following entries in properties file:-
+      server.port=0
+      spring.application.name = users-ws
+      eureka.client.serviceUrl.defaultZone=http://localhost:8010/eureka
+      spring.devtools.restart.enabled=true
+	  
+** Run:- First Run Eureka Server Then Users Api and Hit url - http://localhost:8010 and check that usersApi is registered with Eureka or not. 
+         If UsersApi is register with eureka then hit usersApi url which is register and with Eureka. Go to browser ,In browser after port no hit the		 arguments 
+         mapping arguments of controller class. If we are able to see the messeges in browser then ApiUsers registered successfully with Eureka Server.
+
+3. Account Management:
+____________________________________________		 
+** Add the dependency of Eureka Client, Web and Dev tools.
+** Use annotation @EnableDiscoveryClient in main class.
+** Give the following entries in properties file:-  
+      server.port=0
+      spring.application.name = account-ws
+      eureka.client.serviceUrl.defaultZone=http://localhost:8010/eureka
+      spring.devtools.restart.enabled=true
+	  
+** Run:- First Run Eureka Server Then Users Api and then Account Management and Hit url - http://localhost:8010 and check that usersApi and then check 
+         Account Management is registered  with Eureka or not.If UsersApi and then Account Management is register with eureka then hit   
+         accountManagement url which is register and with Eureka. Go to browser ,In browser   after port no hit the mapping arguments of controller 
+      	 class. If we are able to see the messeges in browser then Account Management registered successfully with Eureka Server.	
+	  
+
+4. Zuul Api Gateway.
+____________________________________________
+** Add the dependency of Eureka Client, Web,Dev tools and Zuul.
+** Use annotation @EnableDiscoveryClient and @EnableZuulProxy in main class.  
+** Give the following entries in properties file:-
+      spring.application.name=zuul
+      server.port=8011
+      eureka.client.serviceUrl.defaultZone=http://localhost:8010/eureka
+	  
+Note :- Zuul api port no is 8011. While running the Zuul application we should run on 8011 port but not 8010.	  
+** Run:- 1. Start all 4 Apps one by one and check all are registered successfully with eureka or not.
+         2. 8011:- Use this Url - localhost:8011 in browser and hit
+		 3. Use application name in browser which is register in properties file.(Eg:- users-ws).
+		 4. After application name of properties file give the mapping arguments of Controller class.
+		      Eg:-http://localhost:8011/users-ws/users/status/check
+			  
+5. Zuul as a load balancer.	
+____________________________________________
+** Try to understand video no - 53 and 54.
+** Try with Spring tool Suite.
+**
+**		  
+	 
+
+	  
+
+
+
+	  
+	  

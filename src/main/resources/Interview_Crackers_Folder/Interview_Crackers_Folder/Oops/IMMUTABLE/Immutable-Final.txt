@@ -1,0 +1,18 @@
+** IMMUTABLE:-
+ 
+ * Declare the class as final so it can'y be extended.
+ * Make all fields private so that direct access is noy allowed.
+ * Don't provide setter methods for variables.
+ * Make all mutable fields final so that its value can be assigned only once.
+ * Initialize all the fields via a constructor performing deep copy.
+ * We Will perform cloning of objects in the getter methods to return a copyreather than returning
+        the actual object reference.
+		
+		
+** FINAL vs IMMUTABILITY:	
+
+ * If we declare a variable as final then we can’t perform reassignment for that variable.
+ * It doesn’t mean in the corresponding object we can’t perform any changes.
+ * That is through final keyword we won’t get any immutability that is final and immutability concepts are different.
+ 
+		

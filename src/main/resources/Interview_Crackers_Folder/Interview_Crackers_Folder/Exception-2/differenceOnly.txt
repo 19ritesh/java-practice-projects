@@ -1,0 +1,26 @@
+(1) CHECKED:-(i)Compiler have info about checked exception
+    (ii) Compiler will force us to keep try,catch or throws ehenever it is required.
+	(iii)If try and catch not required and programmer keep try and catch,then its compile time error.
+	
+(2) UNCHECKED:- Compiler doesn't have any  information about unchecked exception.
+    (ii) Compiler will not force to us keep try and catch block in the program.
+    (iii)Unchecked exception is error type or run type.
+
+(3) THROWS:-(i)Java throw keyboard is used explicitly throw an exception.
+    (ii) Throw is followed by instance.
+    (iii)We can't throw multiple exception.
+    (iv) It is used to create exception object manually.
+
+(4) THROWS:-(i)Java throws keyboard isused to declare an exception.
+     (ii) Throws is followed by class.
+     (iii)But We can throws multiple exceptions.
+     (iv) It is used to handle checked exceptions.
+	 
+(5) EXCEPTION:-(i)  Most of the cases exceptions are caused by our program and these are recoverable  
+   (ii)The use of try-catch blocks can handle exceptions and recover the application from them.
+   (iii)Exceptions can be “checked” or “unchecked,” meaning they may or may not be caught by the compiler.   	 
+	 
+(6) ERRORS:-(i)Most of the cases errors are not caused by our program these are due to lack of system resources and these are non recoverable.
+   (ii)It is not possible to recover from an error.
+   (iii) Errors occur at run-time and are not known by the compiler.
+

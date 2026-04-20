@@ -1,0 +1,21 @@
+** WHAT:-If we will create a new thread every time,it is very costly,it creates performance and memory issues.
+ * Thread pool is pool of already created thread which is ready to do our job.(it is 1.5 version).
+ * It is also known as executor framework.
+ 
+** WHERE:-If i am developing a web application and two task is running and neither is expected to terminate.
+        * And both will be run till to the application life cycle, then we should use Executor framework. 
+		
+** HOW:- Thread pool is nothing but pre-initialized Threads.
+ * Normally collection size is fixed but its not mandatory.
+ * it's facilities the execution of N number of tasks by using some Threads.
+ * If tasks is more than Threads then tasks need to wait in Queue.(FIFO).
+ * Once Threads will complete the task,it will pick new Tasks and starts execution.
+ * If all threads are completed then the Threads remain active and waiting for task.
+ * A watcher is keep watching queue for any new Tasks,as soon as tasks come,Threads again start picking
+   up tasks and execute them. 
+   
+ * Exception Handling:- We can define an uncaught exception handler for the Threads that is created by our
+                        custom thread factory,which we will passed to the Thread pool.
+ * When a thread exits due to an uncaught exception,then JVM reports this event to our uncaughtExceptionHandler,
+   otherwise default handler just prints the stack trace to standard error. 
+		

@@ -1,0 +1,3 @@
+** What is the Max Size of  ArrayList.?
+   Soln:- It depends on list impl.
+   Arraylist can't hold more than INTEGER.MAX_VALUE elements.(That is Maximum 8 gigabytes).

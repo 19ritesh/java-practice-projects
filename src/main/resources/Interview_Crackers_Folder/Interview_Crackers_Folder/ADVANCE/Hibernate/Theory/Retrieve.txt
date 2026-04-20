@@ -1,0 +1,25 @@
+** Retriveing Java object from database:-
+________________________________________________
+**  RETRIEVE BY HIBERNATE:-
+(i)  Student s2=session.get(Student.class,id);
+
+ *   By using primary key,We returned the data from database.
+ *   Internally,Hibernate runs the query for given table and id.
+ 
+(ii) Student myStudent=session.get(Student.class,theStudent.getId());
+
+(iii)How can i get Student objects from database by USING QUERYING?.
+ 
+**   Query quey=session.createQuery("from student");   // from student is HQL.
+     List<Student> syudents=query.list();   
+   
+**   It will return all the object which is saved into the student.
+**   HQL:-Internally runs HQL Query.	   
+
+** DELETE AND UPDATE:-
+_______________________________________________________________________________
+** DELETE:-  myStudent.setFirstName("scooby");
+   OR:- session.createQuery("delete from student where id=2").executeUpdate;
+
+** UPDATE:- session.createQuery("update student set email='abc@gmail.com'").executeUpdate();
+   

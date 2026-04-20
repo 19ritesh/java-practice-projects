@@ -1,0 +1,27 @@
+(1)  OVERRIDING W.R.T STATIC VARIABLES:-(i) We can’t override a static method as non static. 
+     (ii)Similarly we can’t override a non static method as static.
+	 (iii)We can override static to static and it's look like overriding but it is known as method hiding.
+	 
+** DIFFERENCE BETWEEN OVERRIDING AND METHOD HIDING:-
+
+   OVERRIDING:-
+   (i)  Both Parent and Child class methods should be non static. 
+   (ii) Method resolution is always takes care by JVM based on runtime object. 
+   (iii)Overriding is also considered as runtime polymorphism (or) dynamic polymorphism (or) late binding.
+   
+   METHOD HIDING:-
+   (i)  Both Parent and Child class methods should be static.
+   (ii) Method resolution is always takes care by compiler based on reference type. 
+   (iii)Method hiding is also considered as compile time polymorphism (or) static polymorphism (or) early biding.
+   
+   VAR-ARG:-A var arg method should be overridden with var-arg method only. If we are trying to override 
+            with normal method then it will become overloading but not overriding. 
+			
+   OVERRIDING VARIABLES:(1)Overriding concept is not applicable for variables. 
+   (ii) Variable resolution is always takes care by compiler based on reference type. 
+
+   NOTE:-In the above program Parent and Child class variables, whether both are static or non static
+          whether one is static and the other one is non static there is no change in the answer.    
+   
+      
+   

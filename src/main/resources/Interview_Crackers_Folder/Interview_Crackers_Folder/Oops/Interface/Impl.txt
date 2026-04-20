@@ -1,0 +1,28 @@
+Declaration and implementation of an interface: 
+_______________________________________________________
+** Whenever we are implementing an interface compulsory for every method of that interface we should provide 
+   implementation otherwise we have to declare class as abstract in that case child class is responsible to
+   provide implementation for remaining methods. 
+ * Whenever we are implementing an interface compulsory for every
+   method of that interface we should provide implementation otherwise we have to declare class as abstract 
+   in that case child class is responsible to provide implementation for remaining methods.
+ * Whenever we are implementing an interface method compulsory it should be declared as public otherwise 
+   we will get compile time error.  
+
+ * Every method present inside interface is always public and abstract whether we are declaring or not. Hence
+    inside interface the following method declarations are equal. 
+ * As every interface method is always public and abstract we can’t use the following modifiers 
+   for interface methods - Private, protected, final, static, synchronized, native, strictfp. 
+ 
+** Variables:- **
+_______________________________________________________
+ *  An interface can contain variables to define requirement level constants. 
+ *  Every interface variable is always public static and final whether we are declaring or not. 
+    PUBLIC: To make it available for every implementation class.
+	STATIC: Without existing object also we have to access this variable. 
+	FINAL:- Implementation class can access this value but cannot modify. 
+	
+ * For the interface variables compulsory we should perform initialization at the time of declaration
+   only otherwise we will get compile time error. 
+ * Interface variables can be access from implementation class but cannot be modified.    
+  

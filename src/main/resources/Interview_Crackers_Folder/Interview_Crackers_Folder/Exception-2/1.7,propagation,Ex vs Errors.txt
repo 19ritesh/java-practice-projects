@@ -1,0 +1,22 @@
+(1) TRY WITH RESOURCES:-Until 1.6 version try should be associated with either catch or either finally block.but
+  * From 1.7 onwards we can only take try without catch and finally.
+  * Once the control reached at end,whatever resources are their that will get closed automatically.
+  
+(2) MULTI-CATCH BLOCK:-Until 1.6 version we used to take multiple catch block for multiple type exceptions.
+  * But from 1.7 onwards we can take only one catch block for handle the multiple type of exceptions.
+     E.g:-catch(Ae/IOException).
+	 
+(3) EXCEPTION PROPGATION:-	Inside a method if an any exception is raised and we are not handling those exception
+    then the exception object will be propagated to caller method then the caller method is responsible 
+    for handle those exception.
+
+** Difference between errors and Exceptions:-
+ * ERRORS:-(i) An error will occur due to a lack of system resources.
+   (ii)It is not possible to recover from an error.
+   (iii) Errors occur at run-time and are not known by the compiler.
+   
+ * EXCEPTION:-(i) Exceptions are caused by the code of the application itself.  
+   (ii)The use of try-catch blocks can handle exceptions and recover the application from them.
+   (iii)Exceptions can be “checked” or “unchecked,” meaning they may or may not be caught by the compiler.
+   
+  

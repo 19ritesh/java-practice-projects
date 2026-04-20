@@ -1,0 +1,7 @@
+  Save:-                                                   |                               Persist :- 
+___________________________________________________________|______________________________________________________________________
+ ** Returns the identifier(serializable)of the instance    | ** Return nothing because its return type is void.          
+		                                                   |          																																  
+ ** Public serializable save (Object o)                    | ** public void persist(Object o)
+___________________________________________________________|_________________________________________________________   	                 
+ 

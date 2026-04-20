@@ -1,0 +1,19 @@
+**** API Gateway ****   https://dzone.com/articles/7-important-microservices-design-patterns-every-de
+________________________________
+**  The purpose of the API Gateway is to represent a single point of entry to all those clients, and at the same
+    time, to abstract the complexities of communication issues like  protocol transactions and data conversions.
+ *  BENIFITS:- The API gateway is a protocol-agnostic solution that serves distinct clients across several
+    communication channels.	
+ *  It exposes each API for each consumer, according to the communication and client types, and  security 
+    once it is the main entry point. 
+ *  It abstracts any refactoring or break-down structures on existing systems (the so-called monoliths) to its
+    clients, and abstracts underlying microservices topology and technologies involved to final consumers.
+ *  DRAWBACKS:-adding a new layer to the overall architecture decreases the response time due to conversational 
+    costs to request all microservices involved in a specific transaction in a particular business context.	
+	
+**** INTEGRATION PATTERN ****
+________________________________
+** Microservices architecture opts to replace the ESB with the building of smart endpoints and dumb pipes,
+   meaning that your microservices have to take care of all the application integration.	
+	
+ 

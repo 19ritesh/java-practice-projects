@@ -1,0 +1,32 @@
+(1) DATA HIDING:- Our internal data should not go out directly that is outside person can’t access our 
+                 internal data directly.
+				 
+ * IMPLEMENTATION:-By using private modifier we can implement data hiding. 
+   EXAMPLE:-       After providing proper userName and password we can able acess our gmailinbox information.
+ * ADVANTAGE:-     The main advantage of data hiding is security.
+
+(2) ABSTRACTION:-Hide internal implementation and just highlight the set of services, is called abstraction.
+ 
+ * IMPLEMENTATION:-By using abstract classes and interfaces we can implement abstraction.
+ * EXAMPLE:-       By using ATM GUI screen bank people are highlighting the set of services
+                   what they are offering without highlighting internal implementation
+ * ADVANTAGE:-We can achieve security as we are not high lighting our internal implementation.
+            * Enhancement will become very easy because without effecting end user we can able to perform any type of changes in our internal system
+            * It provides more flexibility to the end user to use system very easily. 
+            * It improves maintainability of the application. 
+
+(3)ENCAPSULATION:It is the process of Encapsulating data and corresponding methods into a single module. 
+
+ * IMPLEMENTATION:-If any java class follows data hiding and abstraction such type of class is said to be encapsulated class. 
+ 			     * In encapsulated class we have to maintain getter and setter methods for every data member.
+ * EXAMPLE:-Suppose We have an bank account and that bank account variables are public,then anyone can
+     see the balance of that bank account.That's why its declare private.
+	 The person who can this account,they have access of only private members through method defined inside class.				 
+ * ADVANTAGE:-We can achieve security.
+            * Enhancement will become very easy. 
+            * It improves maintainability of the application.
+            * It provides flexibility to the user to use system very easily. 
+
+ * DISADVANTAGE:-The main disadvantage of encapsulation is it increases length of the code and slows down execution. 
+
+ * TIGHTLY ENCAPSULATED CLASS:If the parent class is not tightly encapsulated then no child class is tightly encapsulated.  

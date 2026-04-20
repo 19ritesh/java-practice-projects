@@ -1,0 +1,232 @@
+Composite key:-
+________________
+** Composite key is a key which is the combination of more than one fild or column of a given table.
+   It may be candidate key or primary key.
+   E.g- create table sampletable(col1 Integer,col2 varchar(20),col3 varchar(50),primary kay(col1,col2));
+   
+** ORDER BY:-
+_________________
+** The order by keyboard is used to sorts the records in ascending order by default.To sort the records in 
+   descending order,use the DESC keyboard.
+   E.g:- select * from customers ORDER by country;
+
+** Group BY:-
+________________
+** The group by statement is often used with aggregate functions(count,max,min,sum,avg) to group the result
+   set by one or more columns.
+   E.g:- select count(customerId),country
+         from customers
+         group by country
+         order by count(countryId)desc;
+
+** HAVING:-
+________________
+** The having clause was added to sql because the WHERE keyboard could not be used with aggregate functions.
+   E.g:- select count (CustomerId),country from customers group by Country having count (CustomerId))>5;
+ 
+** JOINS:-
+________________
+** (1.)Inner join (2.)Left Join (3.) Right Join (4.)Full Join (5.)Cross Join (6.)Self Join
+
+** (1)Cross Join:- When each row of first table is combined with each row from the second table,
+                    known as cartesian join or cross join.
+    E.g:- select * from Matchscore cross join departments;
+
+** (2)Inner Join:- The inner join keyboards selects records that have matching values in both tables.
+   E.g:- select * from student S inner join address A on s.id=a.id;
+   
+** (3)Left outer join:- The left join keyboard returns all records from the left table(table 1),and the matched
+                     records from the right table(table2).
+	Note:- The result is NULL from the right side,if there is no match.
+   E.g:- select * from student S left outer join address A on s.id=a.id;
+
+** (4)Right-Outer Join:- The right outer join keyboard returns all records from the right table(table2),
+                         and the matches records from the left table(table1).   
+	NOTE:-The result is null from left side,when there is no match.
+    E.g:- select * from Student S right outer join Address A on s.id=a.id;
+
+** (5)Full-Outer-Join:-The full outer join keyboard return all records when there is a match in either
+                       left(table1) or right(table2) table records.
+    E.g:- Select * from Student S full outer join Address A on s.id=a.id;
+
+** (6)Self Join:- A self join is a regular join but the table is joined with itself.
+   E.g:- Select * from Student S self join Address A on s.id=a.id;
+_____________________________________________________________________________________________________________________   
+            
+** Alter table:- The other table statement is used to add,delete,or modify columns in a existing table.
+   The Alter table statement is also used to add and drop various constraints an existing table.
+   E.g:- Alter table persons Add DateOfBirth date;
+
+** Sql Constraints:-
+_________________________
+** Constraints can be specified when the table is created with the create table statement,or after table 
+   statement,or after table is created with the ALTER TABLE statement.
+   E.g:- Create table ritesh(id int constraint,Name varchar constraint);
+         E.g:- Not null,Unique,Primary key,foreign key.
+
+** QUERIES:-
+________________
+* insert into person values(1,2,22,2000);
+* insert into person(id,keyno,lockno)values(2,8,7);
+
+* update person set id=4 where name="naveen";
+* update person set name='babu' salary =25000 where salary is null;
+* update person set salary=3000 where id<=2;
+
+* delete from person where name like '%am';
+* delete from person where id=10;
+
+* select * from person where name='roh';
+* select * from person where id>2;
+* select * from person where id>and name is not null;
+* select * from person where id>1 or name is not null;
+* select salary age from person where id<4;
+* select * from person order by age or asc or desc or name;
+* select name as firstname fromPerson;
+
+* select count (*)from person;
+* select count (name) from person;
+* select count (salary) from person;
+
+* select sum (salary)from person;
+* select sum(salary)/count (salary) from person;
+
+* select max (salary) from person;
+
+* select min(salary) from person;
+
+* select avg(salary) from person;
+
+
+** Important Sql Queries:-
+_____________________________________________________________________________________________________________________		 
+* select name from person where salary = 35000;
+* select name from person where salary =select max (salary) from person;
+* select * from person where salary=2000;
+* select * from person where salary=(select min(salary)from person);
+* select max(salary) from person where salary<(select max(salary)from person); //2nd Max.
+* select min (salary) from person where salary>(select min(salary)from person); //2nd Min
+* select * from person where salary=(select max(salary) from person where salary <
+  select(select max(salary)from person)); 
+  
+* select * from employee where salary=(select min(salary)from employee where salary>
+  (select min(salary)from employee where salary>
+  select(min(salary)from employee))); //3rd Minimum
+  
+* Select salary from employee order by salary DESC LIMIT 2,1; //3rd highes salary by using limit clause.
+* Select salary from employee ORDER BY salary DESC LIMIT n-1,1;  
+  
+* select * from employee 
+  where salary=(select min(salary)from employee
+  where salary>(select min(salary)from employee
+  where salary>(select min(salary)from employee
+  where salary>(select min(salary)from employee)))); //4th Minimum Salary
+  
+_______________________________________________________________________________________________________  
+** Foreign Key:-
+______________________
+* Combination of not null and unique:- Create table tab4(id int not null,name varchar(90)unique);
+* Composite Unique key:-   Create table tab1(id int,name varchar(90),constraint Tuk1 unique(id,name));
+* Composite primary key:-  Create table tab1(id int,name varchar(90),constraint tpk1 primary key(id,name));
+* Foreign key:-Create table student(id int unique,firstName varchar(90),lastName varchar(90),age int);
+  Create table Address(id int unique,houseNo varchar(90),city varchar(90),state varchar(90)
+                       constraint fk1 foreign key(id)reference Student(id));
+					   
+______________________________________________________________________________________________________
+* Data definition language(DDL):- Create,alter,Drop etc.
+* Data Manipulation language(DML):- Select,Update,Insert.
+* Data Control language(DCL):- Grant,Revoke.
+_______________________________________________________________________________________________________
+
+
+** Clustered index:-
+_________________________
+* The clustered index is used to reorder the physical order of the table and search based on the key values.
+  Each table can have only one clustered index.
+  
+  
+** Non-Clustered index:-
+__________________________
+* The reason to create non clustered index is searching the data.We will know that clustered indexes are
+  created automatically primary keys are generated,bot non-clustered indexes are created when multiple
+  joins conditions and various filters are used in the query.
+_____________________________________________________________________________________________________________________
+* Is it possible to sort a column using a column alias?
+  Ans:- Yes,We can see the column alias in the ORDER BY instead by where clause for sorting. 
+
+** TRIGGER:-
+_________________
+** A Trigger allows us to execute a batch of sql code when an insert,update or delete command is run against
+   a specific table as trigger is said to be the set of actions that are performed whenever commands like
+   insert,update or delete are given through queries.
+______________________________________________________________________________________________________
+* Write an sql Query to find names of employees start with "A"?
+  Ans:- Select * from employees where employee empName like "A%";
+ 
+* Query to get the third maximum salary of an employee from a table named employee table??
+  Ans:- select top1 salary from(select top3 salary from employee table order by salary desc)
+             as emp order by salary asc;
+
+** DISTINCT Keyboard:-
+______________________________________________________________________________________________________
+* The distinct keyboard is used to ensure that the featched value is only a non-duplicate value.
+* The distinct keyboard is used to select distinct,and it always featches different distinct from the 
+  column of the table.(E.g:-select DISTINCT country from customers;)
+  
+** SQL Functions:-
+______________________________________________________________________________________________________
+* Functions are measured values and cannot create permanent environment changes to sql server.
+
+* SQL Functions are used for following purposes:-
+  * To perform calculations on data.
+  * To Modify individual data items.
+  * To Manipulate the O/P.
+  * To Convert data types.
+
+** INDEX Keyboard:-
+______________________________________________________________________________________________________
+* An index is an disk structure associated with a table or view.That speeds retrival of rows from table or view.
+_____________________________________________________________________________________________________________________
+* What is View:-
+__________________
+* In sql,a view is virtual table based on the result set of an sql statement.  
+* A view can contain rows and columns,just like a real table.
+* The fields in a view are fields from one or more real tables in db.
+* We can also add Sql functions,where and join statements to a view and present the data as if the data were 
+   coming from one single table.
+   (E.g- Create view viewName as select column 1,column 2,from TableName where condition;).
+   Note:- A view always shows up to date table.
+ 
+* The database engine recreates the data,using the views sql statement,every time a user queries a view.
+  E.g:- Create table[Brazil Customers]As select customerName,contactName from customers where country="Brazil";
+_____________________________________________________________________________________________________________________
+** Cartesian-Join:Real Case:-  Lets say that Table1 have to records and Table2 have 10 records then its
+   cartesian join will return 10*10=100 records.
+** The cartesian join query must have at least(N-1) join conditions to prevent a cartesain product.
+   Here N is the no of table in the query.
+** The joining condition in cartesian product is always true or it is always missing.	
+   
+    
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   		 

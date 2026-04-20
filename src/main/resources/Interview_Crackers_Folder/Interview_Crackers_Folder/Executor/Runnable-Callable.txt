@@ -1,0 +1,22 @@
+**   RUNNABLE AND CALLABLE DIFFERENCE:-
+
+(1)  RUNNABLE:-
+_____________________
+
+(i)If a Thread is not required to return anything after completing the job.Then We should go for Runnable interace.
+(ii) Runnable interface contains only run() method.
+(iii)Runnable job not required to return anything and hence return type of run() method is void.
+(iv) Within the run() if there is any chance of rising checked exception,Compulsory we should handle by using
+     try catch because we can't use throws keyboard for run() method.
+(v)  Runnable interface present in java.lang package.	 
+
+
+(2)  CALLABLE:-
+______________________
+
+(i)If a Thread required to return something after completing the job then we should go for callable.
+(ii) Callable interface contains only one methods that is call() method.
+(iii)Callable job is required to to return something hence return method of call() method is object.
+(iv) Inside call method if there is any chance of rising checked exception,We are not required to handle
+     by using try,catch because call() already throws exception.
+(v)  Callable interface present in Java.util.Concurrent package.	 

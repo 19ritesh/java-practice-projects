@@ -1,0 +1,5 @@
+1)  WEAK-HASHMAP:-(i)It is exactly same as HashMap except the following differences. 
+     (ii) In the case of normal HashMap, an object is not eligible for GC even though it doesn’t
+          have any references if it is associated with HashMap. That is HashMap dominates garbage collector. 
+	 (iii)But in the case of WeakHashMap if an object does not have any references then it’s always eligible
+	      for GC even though it is associated with WeakHashMap that is garbage collector dominates WeakHashMap. 

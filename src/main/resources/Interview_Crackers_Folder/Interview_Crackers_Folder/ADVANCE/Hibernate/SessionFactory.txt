@@ -1,0 +1,19 @@
+(1)  What is Session Factory:-
+_______________________________________________________________________________________________________________________   
+** Sessionfactory provides the instance of session>It is the factory session.
+** It holds the data of 2nd level cache that is not enabled default.
+** Org.hibernate.sessionFactory interface provides factory method to get session object.
+
+(2) Diff Betn SESSION AND SESSIONFACTORY:-
+_______________________________________________________________________________________________________________________
+** SESSIONFACTORY:-Reading the Hibernate Configuration file.
+ * (ii)  Create sessions Objects.
+   (iii) Heavy-weight objects.
+   (iv)  Only create once in our app.
+   
+** SESSION:-(i)Wraps a JDBC connection with db.
+   (ii)  Session is the main object used to save/retrieve objects.
+   (iii) Session is short-lived object.
+   (iv)  Session is retrieved from session factory.
+   
+

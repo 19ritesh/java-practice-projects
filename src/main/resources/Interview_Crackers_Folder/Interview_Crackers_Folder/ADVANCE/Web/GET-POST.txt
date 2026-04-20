@@ -1,0 +1,4 @@
+** Diff between GET and POST:-
+ 
+   GET:-  Get is less secure compared to post because data sent is part of URL.
+   POST:- POST is little safer than GET because the are not stored in browser history or in web server logs.

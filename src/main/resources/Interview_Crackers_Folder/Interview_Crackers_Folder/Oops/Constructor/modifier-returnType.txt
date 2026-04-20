@@ -1,0 +1,15 @@
+RULES TO WRITE CONSTRUCTORS:
+ *  Name of the constructor and name of the class must be same. 
+ 
+ *  RETURN TYPE :-
+ 
+ *  RETURN TYPE  concept is not applicable for constructor even void also by mistake if we are declaring 
+    the return type for the constructor we won’t get any compile time error and runtime error compiler simply
+	treats it as a method.
+	
+ *  ACCESS MODIFIER:-
+ 
+ *  The only applicable modifiers for the constructors are PUBLIC, DEFAULT, PRIVATE, PROTECTED. 
+ *  If we are using any other modifier we will get compile time error.  
+ 
+   

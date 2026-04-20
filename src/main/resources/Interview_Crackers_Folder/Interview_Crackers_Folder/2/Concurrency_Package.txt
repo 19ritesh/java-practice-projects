@@ -1,0 +1,52 @@
+(1)ForkJoinPool:-It's very tough to handle the multiple task.
+It breaks the task into multiple parts just like divide and concquer algo.
+
+(2)Countdownlatch:-Countdownlatch is synchronization that allows one or more threads to wait until a set of
+operations to be complete by another thread.
+
+(3)CyclicBarrier:-There is no more difference between countdownlatch and cyclic barrier except some.
+In case of countdownlatch we can't reuse once count reaches to zero,whereas cyclic barrier we can reuse 
+once count reaches to zero.
+We can use cyclic barrier once again while calling reset() method,after calling reset() cyclicbarrier 
+reaches to initial state once again.
+Countdownlatch is better if our requirement is execute anything only once.
+
+(4)Semaphore:-A semaphore controls access to a shared resource through the use of a counter. 
+If the counter is greater than zero, then access is allowed. If it is zero, then access is denied. 
+What the counter is counting are permits that allow access to the shared resource. 
+Thus, to access the resource, a thread must be granted a permit from the semaphore.
+
+(5)AtomicInteger:-The AtomicInteger class protects an underlying int value by providing methods
+that perform atomic operations on the value. It shall not be used as a replacement for an Integer class.
+The AtomicInteger class is part of the java.util.concurrent.atomic package since Java 1.5.
+
+
+Sr. No.	Key	CyclicBarrier	CountDownLatch
+1
+Basic
+A synchronization aid that allows a set of threads to all wait for each other to reach a common barrier point.
+
+
+A synchronization aid that allows one or more threads to wait until a set of operations being performed in other threads completes.
+
+
+2
+Ruunable
+It has a constructor where Runnable can be provided.
+It don’t have such constructor
+
+3
+Thread /Task
+It maintains a count of threads
+It maintains a count of tasks
+
+4.
+A dvanceable
+It is not advancable
+It is advancable.
+
+5
+Exception
+If one thread is interrupted while waiting then all other waiting threads will throw B rokenBarrierException
+Only current thread will throw
+InterruptedException. It will not impact other threads

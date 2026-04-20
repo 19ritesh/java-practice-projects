@@ -1,0 +1,13 @@
+(1) Fail-Fast:- (1)These iterators throw ConcurrentModificationException if a collection modified while 
+    iterating over it.
+	(2) Fail-Fast use original collection to traverse the elements of the collection.
+	(3) These iterator don't require extra memory.
+        E.g:- Iterators returned by ArrayList,Vector,HashMap.
+
+(2) Fail-safe:-(1)Fail safe iterator allow modifications of a collection while iterating over it.
+    (2)In case of fail safe iterators don't throw any exception if a Collection is modified while
+        iterating over it.
+    (3)They use copy of original collection to traverse over the elements of collection.
+    (4)These iterators require extra memory for cloning of collection.
+       E.g:- ConcurrentHashMap,CopyOnWrite ArrayList.	
+				

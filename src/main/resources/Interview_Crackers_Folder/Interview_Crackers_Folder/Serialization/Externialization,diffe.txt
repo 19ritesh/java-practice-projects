@@ -1,0 +1,49 @@
+** Externialization:-The main advantage of Externialization over Serialization is everything takes care by
+	   programmer and J.V.M doesn't have any control. Based on the requirement we can save either total object
+	   or part of the object,which improves performance of the system.  
+	   
+     * To perform Externialization,compolsory the corresponding class should implement externilizable interface.
+     * Externilazable interface define two methods.	(1)writeExternal()  (2)readExternal. 
+	 * Externilazable interface is the child interface of Serializable.
+	 
+	 * (1)public void writeExternal(ObjectOutput out)throws IOException:-This method will be executed automatically
+	   at the time of serialization.This method is used write the code to save required variables to the file.
+	   
+	 * (2)public void readExternal(ObjectInput in)throws IOException,ClassNotFoundException:-This method 
+	   will be executed automatically at the time of D-serialization.This method is used to write code to read
+	   read required variables from the file and assign to current object.
+	   
+	 * But,Strictly speaking at the time of D-serialization,J.V.M will create a separate new object by executing
+	   public no argue constructor on that object J.V.M will call readExternal.
+	 * Hence,Every Externilazable implemented class should compulsory contain public no argue constructor,
+       otherwise we will get Runtime exception saying InvalidClassException.	 
+	   
+** Difference between Serialization and Externialization:-
+** Serialization:-
+(1)   It is meant for default serialization.
+(ii)  Hence,Everything takes care by J.V.M and programmer doesn't have any control.
+(iii) Serialization allows possible to save total object to the file and it is not possible to save part of the object.
+(iv)  Relatively performance is low.
+(v)   It is the best choice if we want to save the total object to the file.
+(vi)  Serializable interface doesn't contain any methos and it is marker interface.
+(vii) Serilizable implemented class not reuired to contain public no argue constructor.
+(viii)Transient keyboard will play role in Serialization.
+
+** Externialization:-
+(i)   It is meant for customized serialization.
+(ii)  Here,Everything takes care by programmer & J.V.M doesn't have any control.
+(iii) Based on our requirement We ca save either total object or part of the object.
+(iv)  Relatively performance is high.
+(v)   It is the best choice if we want to save part of the object to the file.
+(vi)  Externilazable interface contain two methods (i)writeExternal  (ii)readExternal.
+(vii) Externilazable implemented class should compolsory contain public no a constructor.otherwise we will get RuntimeException.
+(viii)Transient keyboardwon't play any role.
+
+
+
+
+
+	   
+	 
+	 
+	 

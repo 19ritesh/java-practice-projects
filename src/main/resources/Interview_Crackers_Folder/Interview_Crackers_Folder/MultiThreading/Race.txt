@@ -1,0 +1,4 @@
+** RACE:-
+
+ * Executing multiple Threads simultaneously and causing data inconsistency problems is nothing 
+    but Race condition .we can resolve race condition by using synchronized keyword. 

@@ -1,0 +1,2 @@
+** Swagger:- Swagger is an interface description language for dscibe RestApi Service by using JSON.
+             Swagger is mainly used with open source tools for design and build the API.

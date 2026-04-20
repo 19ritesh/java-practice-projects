@@ -1,0 +1,51 @@
+*Q. How can i create a Immutable class with mutable reference??
+
+**  Perform cloning of objects in the getter methods to return a copy rather returning the actual object reference.
+    
+E.g:- final class Employee {
+	
+	private final String empName;
+	private final int age;
+	
+	public Employee(String name,int age)
+	{
+		this.empName=name;
+		this.age=age;
+		
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+	public Address getAddress() throws CloneNotSupportedException
+	{
+		return(Address)Address.clone();
+	}
+}
+    public class Address implements Cloneable{
+	public String addressType;
+	public String address;
+	public Address(String addressType, String address) {
+		super();
+		this.addressType = addressType;
+		this.address = address;
+	}
+	public String getAddressType() {
+		return addressType;
+	}
+	public void setAddressType(String addressType) {
+		this.addressType = addressType;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+}
+
+Note:-We can prevent by using serialization also.

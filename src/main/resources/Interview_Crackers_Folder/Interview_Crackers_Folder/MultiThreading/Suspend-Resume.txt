@@ -1,0 +1,7 @@
+** SUSPEND() AND RESUME():- 
+
+(1) SUSPEND():- A Thread can suspend another Thread by using suspend() method then that Thread 
+                  will be paused temporarily. 
+				  
+(2) RESUME():-A Thread can resume a suspended Thread by using resume() method then suspended 
+              Thread will continue its execution. 				  

@@ -1,0 +1,9 @@
+What are the states of the objects in Hibernate:-
+_______________________________________________________________________________________________________________________
+** There are 3 states of object(instance)in hibernate:-
+** 1. Transient:-  The object is in a transient state if it is just created but has no primary key(identifier)
+                   and not associated with a session.
+** 2. Persistent:- The object is in a persistent state if a session is open,and you just saved the instance				  
+				   in the database or retrieved the instance from the database.
+** 3. Detached:-   The object is in a deteached state if a session is closed.After deteached state,the object
+                   comes to persistent state if we will call lock() or update().

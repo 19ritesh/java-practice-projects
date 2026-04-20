@@ -1,0 +1,9 @@
+(1) SLEEP():- If a Thread don’t want to perform any operation for a particular amount of time
+                 then we should go for sleep() method.
+				 
+	SIGNATURE:- public static native void sleep(long ms) throws InterruptedException.
+
+(2)	WAIT():-But in case of WAIT() method,thread goes in waiting state and it won't came back automatically
+            until we call the notify() and notifyAll().
+   			
+		

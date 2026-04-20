@@ -1,0 +1,12 @@
+(1)  COPY-ON-WRITE-ARRAYLIST:-(i)It is thread version of Arraylist.
+     (ii)CopyOnWriteArrayList creates a cloned copy of underlying Arraylist for every update operation at certain
+	 point both will synchronized automatically which is taken care by J.V.M internally.
+	 
+(2)  COPY-ON-WRITE-ARRAYSET:-(i)It is thread version of set.
+     (ii) Internally implement by copyOnWriteArrayList.
+     (iii)Multiple Threads are able to perform Read operation simultaneously but for every update operation
+          a seperate cloned copy will be created.
+      (iv)As for every update operation a seperate cloned copy will be created which is costly.
+      (v) Hence,If multiple update operation are required then it is not recommended to use copyOnWriteArraySet.
+      (vi)While one Thread iterating set the other Threads are allowed to Modify set and We won't get
+           ConcurrentModificationException.	  

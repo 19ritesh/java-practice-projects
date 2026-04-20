@@ -1,0 +1,7 @@
+** ACID:-
+  
+(1) Atomicity: Is defined as either all operations can be done or all operation can be undone
+(2) Consistency: After a transaction is completed successfully, the data in the datastore should be a reliable data.
+    This reliable data is also called as consistent data
+(3) Isolation: If two transactions are going on the same data then one transaction will not disturb the other transaction
+(4) Durability: After a transaction is completed, the data in the datastore will be permanent until another transaction is going to be performed on that data

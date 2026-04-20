@@ -1,0 +1,17 @@
+** QUERY,PATH PARAMETER:-
+_________________________________
+****PATH****
+_______________
+** If there is a scenario to retrieve a record based on id, for example We need to get the details of the
+   employee whose id is 15, then you can have resource with @PathParam.
+   E.g:-GET /employee/{id}
+ * @PathParam for retrieval based on id.  
+ 
+****QUERY****
+____________________   
+ * If there is a scenario where you need to get the details of all employees but only 10 at a time, you may
+   use query param.This says that starting employee id 1 get ten records.
+   E.g:-GET /employee?start=1&size=10   
+ * @QueryParam for filter or if you have any fixed list of options that user can pass. 
+
+ 

@@ -1,0 +1,15 @@
+(1)  OVERLOADING:-Two methods are said to be overload if and only if both having the same name but different argument types.
+ 
+     CASES:-(i) Automatic promotion in overloading. 
+	 
+	 (ii) In overloading Child will always get high priority then Parent. 
+	       E.g:-Test t=new Test();
+		   t.methodOne("bhaskar");//String version   
+		   t.methodOne(new Object());//Object version   
+		   t.methodOne(null);//String version 
+		   
+	(iii) In general var-arg method will get less priority that is if no other method matched then only var-arg 
+	      method will get chance for execution it is almost same as default case inside switch.
+		  
+     (iv) In overloading method resolution is always based on reference type based on runtime object 
+        	and runtime object won’t play any role in overloading. 		  

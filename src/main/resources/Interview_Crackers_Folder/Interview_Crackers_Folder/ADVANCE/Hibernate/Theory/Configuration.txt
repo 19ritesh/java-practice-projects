@@ -1,0 +1,29 @@
+Configuration:-
+____________________
+<hibernate-configuration>
+<session-factory>
+<property name="Connection driver-Class">Oracle.jdbc.driver.OracleDriver</property>
+<property name="Connection url">jdbc:Oracle:thin:@localhost:1521:XE</property>
+<property name="userName">userName</property>
+<property name="password">password</property>
+
+//It's for how many connection We are creating in our current application.
+<property name="connection.pool-size">1</property>
+
+//Enables Hibernate automatic session context management.
+<property name="current-session-context-Class">thread</property>
+
+//Disable second level cache.
+<property name="Cache.provider_Class">org.hibernate.cache.NoCacheProvider</property>
+
+//show all executed Sql Queries.
+<property name="show-sql">true</property>
+
+//Drop and Create re database schema
+<property name="hbm2ddl.auto">create</property>
+
+//Mapping files
+<mapping resource="userDetails.hbm.Xml"/>
+
+</session-factory>
+</hibernate-configuration>

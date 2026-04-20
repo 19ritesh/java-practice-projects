@@ -1,0 +1,17 @@
+(1) YIELD():- Yield method causes "to pause curent executing Thread for giving the chance of remaining
+            waiting threads of same priority".
+ 	 
+	 SIGNATURE:-  public static  native void yield()
+	 
+ * If all Threads have the low priority or if there is no waiting Threads then the same
+     thread will be continued its execution.	 
+
+(2) JOIN():- If a Thread wants to wait until completing some other thread then we should go
+                    for join() method.
+					
+ * Every join() method throws InterruptedException, which is checked exception hence compulsory we
+                 should handle either by try catch or by throws keyword.
+				 
+	SIGNATURE:-  public final void join()throws InterruptedException 
+	
+ 				

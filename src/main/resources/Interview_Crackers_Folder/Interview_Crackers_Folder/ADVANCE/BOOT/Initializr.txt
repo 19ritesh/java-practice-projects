@@ -1,0 +1,6 @@
+****Spring Initializr****
+____________________________
+**  Spring Initializr is used to easily generate the structure of the Spring Boot Project.
+ *  It provides various options for the project that are expressed in a metadata.
+
+ *  The metadata model allows us to configure the list of dependencies that is supported by JVM and platform versions.

@@ -1,0 +1,22 @@
+Architecture:
+________________
+** Suppose that there is two client and one client want to send the message to another client on that case we
+   use the JMS.
+ * First client will Create the message and send those message to the queue.
+ * Second client is message consumer which consume message from the queue and send acknowledge to the queue.
+ * For this we will use the Queue of ActiveMQ.
+ 
+ **POM.XML:-**
+______________________
+ * We Will add the ActiveMq and Spring-jms dependency in the pom.xml.
+
+****JMS NOTE****
+_________________________
+** JMS TEMPLATE:-JmsTemplate provides an abstraction which hides all the complexities of jms communication.
+ * Without JMS Template,if we will forced to create:-Connections/sessions/MessageProducers/MessageConsumers 
+   and catch all the exception may throw.
+ * With JmsTemplate,We get simple API's to work with,and spring behind the scenes take care of all JMS complexities.    
+ * It takes care of creating a connection,obtaining a session,and finally  	sending of message.So We use 
+   the JmsTemplate for sending the message.
+ * JMS Template also provides possibilities for receiving message but that is synchronus[blocks the listening 
+   application],and usually not preffered when asynchronous communication is possible.  

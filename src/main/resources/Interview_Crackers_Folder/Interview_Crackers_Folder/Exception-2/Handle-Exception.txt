@@ -1,0 +1,28 @@
+@ControllerAdvice
+public class ExceptionHelper extends ResponseEntityException {
+
+private static final Logger logger = LoggerFactory.getLogger(ExceptionHelper.class);
+
+@ExceptionHandler(value = { InvalidInputException.class })
+public ResponseEntity<Object> handleInvalidInputException(InvalidInputException ex) {
+
+LOGGER.error("Invalid Input Exception: ",ex.getMessage());
+
+//Handling the Errors here
+ErrorMessage errorMessage=new ErrorMessage(ex.getMessage());
+
+//Handling the Exception here
+return new ResponseEntity<Object>(ex.getMessage(),HttpStatus.BAD_REQUEST);
+    }
+	
+** 	Will make a class and notified with @ControllerAdvice annotation and will make a methhod that will be 
+    notified with @ExceptionHandler annotation.
+**  HANDLE ERROR:-We will create error message and pass ex.getMessage() inside constructor of that error.
+**  HANDLE EXCEPTION:- We will create ResponseEntity object and we will pass the ex.getMessage() and HttpStatus
+   (Pojo class getter method and HttpStatus message).
+ 	
+** @ControllerAdvice:-It is used to write the global code that can be applied to a wide range of controllers.
+** @ExceptionHandler:- It will take arguement as Exception class.So if we have defined one of these for exception
+   class,then all the exception thrown by our request handler method and that will have handled
+	
+	

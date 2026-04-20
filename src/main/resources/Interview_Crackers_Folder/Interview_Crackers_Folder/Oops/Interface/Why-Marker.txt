@@ -1,0 +1,5 @@
+** Why we use  marker interface.??
+   Soln:- We know very well that marker interface is a interface where it doesn't contains any methods.
+          E.g:-Clonable,Serializable Interface.
+	  **  Simply it is used to give indication or command to JVM or compiler.
+          E.g:-If a class is serializable then the serialize operation.	

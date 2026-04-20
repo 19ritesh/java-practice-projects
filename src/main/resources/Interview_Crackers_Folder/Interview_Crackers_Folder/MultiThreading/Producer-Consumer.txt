@@ -1,0 +1,8 @@
+** PRODUCER AND CONSUMER PROBLEM:-
+ 
+ * Producer(producer Thread) will produce the items to the queue and consumer(consumer thread) will consume
+   the items from the queue. If the queue is empty then consumer has to call wait() method on the queue object 
+   then it will entered into waiting state.
+   
+ * After producing the items producer Thread call notify() method on the queue to give notification
+    so that consumer Thread will get that notification and consume items. 

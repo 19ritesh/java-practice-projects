@@ -1,0 +1,13 @@
+** Log4J:-
+________________________
+** It is used for write the logging enables the programmer into a file parmanently.
+ * Log4J and logback frameworks can be used in Hibernate framework for support logging.
+ 
+** There are two ways to perform logging using log4J:-
+   (i)  By log4J.xml
+   (ii) Create the properties file into the src folder.
+
+** How We have to use log4J.properties:-
+_____________________________________________
+** Add the jar file of log4J.
+** Create the properties file into the SRC folder.   

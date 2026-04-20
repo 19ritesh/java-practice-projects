@@ -1,0 +1,6 @@
+** Why We are using JPA annotations instead of Hibernate.??
+
+** JPA is standard specification.
+ * Hibernate is implementations of JPA specifications.
+ * Hibernate implement all of the JPA annotation.
+ *The Hibernate team recommended to use JPA annotations for best practice.

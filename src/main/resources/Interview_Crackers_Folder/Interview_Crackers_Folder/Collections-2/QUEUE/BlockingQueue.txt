@@ -1,0 +1,4 @@
+** Blocking Queue:-Blocking queue interface represents a queue which is Thread safe to put elements into,
+                   and take elements out of form.
+           Usage:- Blocking queue is typically used to have one Thread produce objects,which another
+		           thread consumes.

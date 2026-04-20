@@ -1,0 +1,14 @@
+https://www.journaldev.com/7969/spring-boot-tutorial#what-is-spring-boot
+
+https://www.javatpoint.com/spring-tutorial-constructor-injection-with-dependent-object
+https://www.javatpoint.com/hibernate-one-to-many-mapping-using-annotation-example
+https://www.w3schools.com/sql/sql_join_left.asp
+https://www.geeksforgeeks.org/data-structures/
+https://www.geeksforgeeks.org/linked-list-set-2-inserting-a-node/
+https://howtodoinjava.com/java/multi-threading/java-callable-future-example/
+https://www.geeksforgeeks.org/sorting-algorithms/
+https://www.geeksforgeeks.org/searching-algorithms/
+https://www.geeksforgeeks.org/what-is-lazy-loading/
+https://www.geeksforgeeks.org/differences-treemap-hashmap-linkedhashmap-java/
+
+

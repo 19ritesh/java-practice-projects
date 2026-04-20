@@ -1,0 +1,26 @@
+(1) ENUMERATION:-(1)It is legacy.
+    (ii) It is applicable for Only legacy classes
+	(iii)Single direction cursor(forward).
+	(iv) We can get by using by elements() method.
+	(v)  It is used only for read.
+	(vi) Methods:- hasMoreElement(), nextElement().
+	(vii)E.g:- Enumeration e=v.elements();
+ 
+
+
+(2) ITERATOR:-(1)It is not legacy.
+    (ii) It is applicable for any collection object.
+	(iii)Single direction cursor(forward)
+	(iv) We can get by using by iterator() method.
+	(v)  It is used for Both read and remove.
+    (vi) Methods:-	hasNext() ,next(), remove().
+	(vii)E.g:- Iterator   itr=c.iterator();  
+
+
+(3) LISTITERATOR:-(1)It is not legacy.
+   (ii) It is applicable for any collection object.
+   (iii)Bi-directional. 
+   (iv) We can get by using by listIterator() method.
+   (v)  It is used for Read/remove/replace/add.
+   (vi) 9 methods.
+   (vii)E.g:- ListIterator itr=l.listiterator(); 

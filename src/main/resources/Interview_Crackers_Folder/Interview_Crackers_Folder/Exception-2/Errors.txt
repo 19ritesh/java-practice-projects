@@ -1,0 +1,19 @@
+** Errors(Runtime):-
+ 
+** StackOverFlowError:-Whenever we are trying to invoke recursive metod call then JVM will raise this error.
+                        Soln:-(1)Fix the code        (2)Increase Thread stack size.
+
+** OUtOfMemoryError:-When memory is run out of memory in the heap.
+                     If we try to create a objand thee is no more space in heap to allocate that
+                     object then we will get out of memory error.
+   Soln:-JMap is a command line utility comes with JDK6 and allows us to take a memory dump of the heap in
+          a file. [jmap -dump:format=b,file=heapdump 6054]  
+
+** NoSuchMethodError:-Thrown if an application tries to call specific method of a class.And
+                       that method is no longer available.(Runtime).
+					   
+** NoClassDefnFound Error:-It is the child class of errors and hence it is unchecked.
+                       It is an error that occurs when a particular class is present at compile time, but was missing at run time.
+					   
+** Assertion error:-It is the child class of error and hence it is unchecked.Raised explicitly by the 
+                    programmer or by API developer that assert statement fails.
