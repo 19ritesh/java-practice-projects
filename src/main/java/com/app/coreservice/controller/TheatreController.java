@@ -1,12 +1,13 @@
 package com.app.coreservice.controller;
 
-import com.app.coreservice.dto.request.GetMoviesRequest;
+import com.app.coreservice.dto.request.GetBrowseTheatresRequest;
+import com.app.coreservice.dto.response.BrowseTheatreResponse;
 import com.app.coreservice.dto.response.GeneralResponse;
-import com.app.coreservice.dto.response.MovieResponse;
-import com.app.coreservice.service.MovieService;
+import com.app.coreservice.service.TheatreService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,28 +16,30 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @Slf4j
+@CrossOrigin
 @RestController
-@RequestMapping(com.app.coreservice.constants.Constants.BROWSE_MOVIES)
 @RequiredArgsConstructor
-public class BrowseMovieController {
+@RequestMapping(com.app.coreservice.constants.Constants.BROWSE_THEATRES)
+public class TheatreController {
 
-    private final MovieService movieService;
+    private final TheatreService theatreService;
 
-    // http://localhost:8080/movies
-    @GetMapping("/cinemas")
-    public ResponseEntity<GeneralResponse> getMovies(@ModelAttribute GetMoviesRequest request) {
+    @GetMapping(com.app.coreservice.constants.Constants.GET_THEATRES)
+    public ResponseEntity<GeneralResponse> browseTheatres(
+            @ModelAttribute GetBrowseTheatresRequest request) {
 
-        log.info("MovieController :: getMovies()");
+        log.info("TheatreController :: browseTheatres()");
 
         long startTime = System.currentTimeMillis();
 
-        List<MovieResponse> movies = movieService.getMovies(request);
+        List<BrowseTheatreResponse> response =
+                theatreService.browseTheatres(request);
 
         long endTime = System.currentTimeMillis();
 
         return ResponseEntity.ok(
                 GeneralResponse.builder()
-                        .data(movies)
+                        .data(response)
                         .errorMessage(null)
                         .timeTakenInMs(endTime - startTime)
                         .serverId("SERVER_1")
